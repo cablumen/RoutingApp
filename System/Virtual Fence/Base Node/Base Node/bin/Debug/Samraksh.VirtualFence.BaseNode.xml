@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samraksh.VirtualFence.BaseNode</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.VirtualFence.Base">
+            <summary>
+            This program listens for radio packets and prints information about identity, sig
+            nal strength, etc.
+            It also periodically sends radio packets that another mote can listen to.
+            It can help you debug another program by "sniffing" what's coming over the radio.
+            </summary>
+        </member>
+        <member name="M:Samraksh.VirtualFence.Base.Main">
+            <summary>
+            Set up things for the Base Node
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AppGlobal</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal">
+            <summary>
+            Common items for all system nodes
+            </summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.DetectionMessageSize">
+            <summary>
+            Size of detection message
+            </summary>
+        </member>
+        <member name="P:Samraksh.VirtualFence.Components.AppGlobal.AppPipe">
+            <summary>Application pipe</summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.MessageIds">
+            <summary>
+            App message IDs
+            </summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.MessageIds.Detect">
+            <summary>Detection has occurred</summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType">
+            <summary>
+            Classification results
+            </summary>
+            <remarks>
+            	Values should not include *, [, ] or control chars.
+            	These are converted to chars and sent to PC as part of an ASCII string
+            </remarks>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.Detect">
+            <summary>Detection, no classification yet</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.ProvisionalHuman">
+            <summary>Provisional Human</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.ProvisionalNonHuman">
+            <summary>Provisional Non-human</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.ProvisionalAmbiguous">
+            <summary>Provisional ambiguous</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.FinalHuman">
+            <summary>Final Human</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.FinalNonHuman">
+            <summary>Final Non-human</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.FinalAmbiguous">
+            <summary>Final ambiguous</summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages">
+            <summary>
+            Mote Messages
+            </summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages.Compose">
+            <summary>
+            Compose App messages
+            </summary>
+        </member>
+        <member name="M:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages.Compose.Detection(System.Byte[],System.UInt16,Samraksh.VirtualFence.Components.AppGlobal.ClassificationType,System.Int32,System.Byte)">
+            <summary>
+            Compose a detection message
+            </summary>
+            <param name="msgBytes"></param>
+            <param name="originator"></param>
+            <param name="classificatonType"></param>
+            <param name="detectionNum"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages.Parse">
+            <summary>
+            Parse App messages received
+            </summary>
+        </member>
+        <member name="M:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages.Parse.Detection(System.Byte[],Samraksh.VirtualFence.Components.AppGlobal.ClassificationType@,System.UInt16@,System.UInt16@,System.Byte@)">
+            <summary>
+            Parse detection message
+            </summary>
+            <param name="msgBytes"></param>
+            <param name="classificationType"></param>
+            <param name="detectionNum"></param>
+            <param name="originator"></param>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.PCMessages">
+            <summary>
+            PC Messages
+            </summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.PCMessages.Compose">
+            <summary>
+            Compose messages to send to PC
+            </summary>
+        </member>
+        <member name="M:Samraksh.VirtualFence.Components.AppGlobal.PCMessages.Compose.Detection(System.Int32,Samraksh.VirtualFence.Components.AppGlobal.ClassificationType,System.Int32)">
+            <summary>
+            Compose Detection message to send to PC
+            </summary>
+            <param name="originator"></param>
+            <param name="classificatonType"></param>
+            <param name="detectionNumber"></param>
+            <returns></returns>
+            <remarks>Bracket message with * ... \n</remarks>
+        </member>
+    </members>
+</doc>

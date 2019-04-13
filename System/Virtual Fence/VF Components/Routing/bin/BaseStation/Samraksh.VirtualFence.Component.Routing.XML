@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samraksh.VirtualFence.Component.Routing</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.VirtualFence.Components.Routing">
+            <summary>
+            Provides routing services between motes. 
+            Uses a modified Bellman-Ford routing protocol to form a least-cost spanning tree.
+            </summary>
+        </member>
+        <member name="P:Samraksh.VirtualFence.Components.Routing.SelfAddress">
+            <summary>
+            Address of node
+            </summary>
+        </member>
+    </members>
+</doc>

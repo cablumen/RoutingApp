@@ -1,0 +1,127 @@
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManager.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManager.XML
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\RoutingGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Utility.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\LocalManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\RoutingGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Utility.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\LocalManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\RoutingGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Utility.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LE\LocalManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\RoutingGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Utility.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\BE\LocalManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\RoutingGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_Net.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Utility.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_DotNow.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LocalManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Utility.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Utility.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\SystemGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\SystemGlobal.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\RoutingGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManagerGlobal.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_Net.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_Net.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_DotNow.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_DotNow.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LocalManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\bin\RelayNode\LocalManagerGlobal.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\Net Manager.csprojResolveAssemblyReference.cache
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\TinyCLR_DebugReferences.cache
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\be\Samraksh.Manager.Component.NetManager.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\be\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\le\Samraksh.Manager.Component.NetManager.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\le\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\Samraksh.Manager.Component.NetManager.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager\obj\RelayNode\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManager.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManager.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManager.XML
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\le\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\be\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\RoutingGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Utility.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_DotNow.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\RoutingGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Utility.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_DotNow.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\RoutingGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Utility.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\RoutingGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Utility.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\RoutingGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_Net.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Utility.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_DotNow.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Utility.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Utility.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\SystemGlobal.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\RoutingGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh.Manager.Component.NetManagerGlobal.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_Net.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_Net.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_DotNow.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\bin\RelayNode\Samraksh_eMote_DotNow.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\Net Manager.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\be\Samraksh.Manager.Component.NetManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\be\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\le\Samraksh.Manager.Component.NetManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\le\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\Samraksh.Manager.Component.NetManager.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\Samraksh.Manager.Component.NetManager.pdb

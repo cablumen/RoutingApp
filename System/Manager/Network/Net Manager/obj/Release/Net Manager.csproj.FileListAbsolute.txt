@@ -1,0 +1,2 @@
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\Release\Net Manager.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\Release\TinyCLR_DebugReferences.cache

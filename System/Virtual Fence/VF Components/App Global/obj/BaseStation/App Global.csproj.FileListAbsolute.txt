@@ -1,0 +1,135 @@
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\AppGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\AppGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh.VirtualFence.Component.AppMsgHandler.XML
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Utility.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Utility.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Utility.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Utility.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\be\AppGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\be\AppGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\le\AppGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\le\AppGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\AppGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\AppGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\App Global.csprojResolveAssemblyReference.cache
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Global\obj\BaseStation\TinyCLR_DebugReferences.cache
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\AppGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\AppGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh.VirtualFence.Component.AppMsgHandler.XML
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\SystemGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Utility.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\SystemGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Utility.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Utility.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Utility.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\SystemGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.xml
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.xml
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.xml
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\App Global.csprojResolveAssemblyReference.cache
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\TinyCLR_DebugReferences.cache
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\be\AppGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\be\AppGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\le\AppGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\le\AppGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\AppGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\AppGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\AppGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\AppGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh.VirtualFence.Component.AppMsgHandler.XML
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\le\AppGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\be\AppGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Utility.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Utility.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\LE\Utility.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\BE\Utility.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Utility.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_DotNow.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\bin\BaseStation\Samraksh_eMote_Net.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\App Global.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\be\AppGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\be\AppGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\le\AppGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\le\AppGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\AppGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\BaseStation\AppGlobal.pdb

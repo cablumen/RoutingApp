@@ -1,0 +1,160 @@
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.XML
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\RoutingGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Utility.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\LocalManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\RoutingGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Utility.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\LocalManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\RoutingGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Utility.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\LocalManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\RoutingGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Utility.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\LocalManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\RoutingGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LocalManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\RoutingGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LocalManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\bin\BaseStation\LocalManagerGlobal.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\Net Manager Global.csprojResolveAssemblyReference.cache
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\BaseStation\TinyCLR_DebugReferences.cache
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.XML
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\RoutingGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\SystemGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Utility.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\RoutingGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\SystemGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Utility.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\RoutingGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Utility.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\RoutingGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\SystemGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Utility.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\RoutingGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\SystemGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.xml
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\RoutingGlobal.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.xml
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.pdb
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.xml
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\Net Manager Global.csprojResolveAssemblyReference.cache
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\TinyCLR_DebugReferences.cache
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\roy17\Documents\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.XML
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\RoutingGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Utility.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\RoutingGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Utility.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\RoutingGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Utility.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\LE\Samraksh_eMote_DotNow.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\RoutingGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Utility.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\BE\Samraksh_eMote_DotNow.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\RoutingGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Utility.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\RoutingGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_Net.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\BaseStation\Samraksh_eMote_DotNow.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\Net Manager Global.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\BaseStation\Samraksh.Manager.Component.NetManagerGlobal.pdb

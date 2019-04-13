@@ -1,0 +1,839 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utility</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.Components.Utility.DebouncedOnOffSwitch">
+            <summary>
+            Debounce On-Off Switch
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.DebouncedOnOffSwitch.#ctor(Microsoft.SPOT.Hardware.Cpu.Pin,Microsoft.SPOT.Hardware.Port.ResistorMode,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="thePin"></param>
+            <param name="resistorMode"></param>
+            <param name="onVal">True for low-high, false for high-low</param>
+            <param name="bounceTimeMs"></param>
+            <param name="longPressWaitMs"></param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Samraksh.Components.Utility.DebouncedOnOffSwitch.DebounceSwitch_OnInterrupt(System.UInt32,System.UInt32,System.DateTime)">
+            <summary>
+            Handle an interrupt
+            Atomically invoke the state machine. Ignore switch events until state machine returns.
+            </summary>
+            <param name="port"></param>
+            <param name="state"></param>
+            <param name="interruptTime"></param>
+        </member>
+        <member name="P:Samraksh.Components.Utility.DebouncedOnOffSwitch.Port">
+            <summary>Interrupt port instance</summary>
+        </member>
+        <member name="E:Samraksh.Components.Utility.DebouncedOnOffSwitch.OnShortPress">
+            <summary>Callback for short press (less than LongPressTime)</summary>
+        </member>
+        <member name="E:Samraksh.Components.Utility.DebouncedOnOffSwitch.OnLongPress">
+            <summary>Callback for long press (at least LongPressTime)</summary>
+        </member>
+        <member name="T:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine">
+            <summary>
+            State machine for debouncing
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine.SwitchEvent(System.Boolean)">
+            <summary>
+            Switch event has occurred
+            </summary>
+            <param name="pressed">true iff switch is pressed (on)</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine.DebounceTimer_Tick(System.Object)">
+            <summary>
+            Debounce timer
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="F:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine.DebounceStates.WaitPress">
+            <summary>Waiting for switch press</summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine.DebounceStates.DebouncePress">
+            <summary>Debouncing the press</summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine.DebounceStates.WaitRelease">
+            <summary>Waiting for switch release</summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.DebouncedOnOffSwitch.StateMachine.DebounceStates.DebounceRelease">
+            <summary>Debouncing the release</summary>
+        </member>
+        <member name="T:Samraksh.Components.Utility.EnhancedEmoteLCD">
+            <summary>
+            EmoteLCD with initialization and extended methods
+            </summary>
+            <remarks>
+            Features: 
+            	Can query what's being displayed via _currentChars and CurrentDPs
+            	Write overloads for arguments of int and string
+            	Extension methods: char.ToLCD and LCD.ToChar
+            </remarks>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.#ctor">
+            <summary>
+            Initialize the LCD
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.Display(System.Int32)">
+            <summary>
+            Display an integer. If more than 4 decimal digits, display first 4 only
+            </summary>
+            <param name="num">The number to be displayed</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.Write(System.Int32)">
+            <summary>
+            Write an integer. If more than 4 decimal digits, display first 4 only
+            </summary>
+            <param name="num">The number to be displayed</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.Display(System.String)">
+            <summary>
+            Display a string. If more than 4 characters, display first 4 only
+            </summary>
+            <param name="str">The string to be displayed</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.Write(System.String)">
+            <summary>
+            Write a string. If more than 4 characters, write first 4 only
+            </summary>
+            <param name="str">The string to be displayed</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.Clear">
+            <summary>
+            Clear the display, set _currentChars to blank and CurrentDPs to false (not present)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.SetDP(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Set decimal point
+            </summary>
+            <param name="dp1"></param>
+            <param name="dp2"></param>
+            <param name="dp3"></param>
+            <param name="dp4"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.Write(Samraksh.eMote.DotNow.LCD,Samraksh.eMote.DotNow.LCD,Samraksh.eMote.DotNow.LCD,Samraksh.eMote.DotNow.LCD)">
+            <summary>
+            Write the LCD characters to the display and record in _currentChars
+            </summary>
+            <param name="data4"></param>
+            <param name="data3"></param>
+            <param name="data2"></param>
+            <param name="data1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.WriteN(System.Int32,Samraksh.eMote.DotNow.LCD)">
+            <summary>
+            Write the LCD character in the designated column and record in _currentChars
+            </summary>
+            <param name="column"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.EnhancedEmoteLCD.WriteRawBytes(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Write raw bytes to the display and record in _currentChars
+            </summary>
+            <param name="data4"></param>
+            <param name="data3"></param>
+            <param name="data2"></param>
+            <param name="data1"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Samraksh.Components.Utility.EnhancedEmoteLCD.CurrentChars">
+            <summary>
+            Get copy of current values displayed
+            </summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.EnhancedEmoteLCD.CurrentDPs">
+            <summary>
+            Current decimal points displayed
+            </summary>
+        </member>
+        <member name="T:Samraksh.Components.Utility.LcdExtensions">
+            <summary>
+            Extend the char class with a method that converts to LCD
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.LcdExtensions.ToChar(Samraksh.eMote.DotNow.LCD)">
+            <summary>
+            Converts an LCD to char 
+            </summary>
+            <remarks>
+            Example: LCD.CHAR_A.ToChar()
+            </remarks>>
+            <param name="lcdArg">The input as an LCD</param>
+            <returns>The corresponding char value</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.LcdExtensions.ToLcd(System.Char)">
+            <summary>
+            Converts a char to LCD
+            </summary>
+            <remarks>
+            Example: 'a'.ToLCD()
+            </remarks>
+            <param name="charArg">The input as a char</param>
+            <returns>The corresponding LCD value</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.In(System.String,System.String[])">
+            <summary>
+            Checks string object's value to array of string values
+            </summary>        
+            <param name="stringValues">Array of string values to compare</param>
+            <returns>Return true if any string value matches</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.Right(System.String,System.Int32)">
+            <summary>
+            Returns characters from right of specified length
+            </summary>
+            <param name="value">String value</param>
+            <param name="length">Max number of charaters to return</param>
+            <returns>Returns string from right</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.Left(System.String,System.Int32)">
+            <summary>
+            Returns characters from left of specified length
+            </summary>
+            <param name="value">String value</param>
+            <param name="length">Max number of charaters to return</param>
+            <returns>Returns string from left</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.ToCharArray(System.Byte[])">
+            <summary>
+            Convert byte array to char array
+            </summary>
+            <param name="byteArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.ToCharArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Convert byte array to char array
+            </summary>
+            <param name="byteArr"></param>
+            <param name="start"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.ToByteArray(System.Char[])">
+            <summary>
+            Convert char array to byte array
+            </summary>
+            <param name="charArr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.ExtensionMethods.PadLeft(System.String,System.Int32,System.Char)">
+            <summary>
+            Pad left a string
+            </summary>
+            <param name="instring"></param>
+            <param name="outLength"></param>
+            <param name="padding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Samraksh.Components.Utility.BitConverter">
+            <summary>
+            Converts base data types to an array of bytes, and an array of bytes to base data types.
+            </summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.BitConverter.IsLittleEndian">
+            <summary>
+            Indicates the byte order ("endianness") in which data is stored in this computer architecture.
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Boolean)">
+            <summary>
+            Returns the specified Boolean value as an array of bytes.
+            </summary>
+            <param name="value">A Boolean value. </param>
+            <returns>An array of bytes with length 1.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Boolean)">
+            <summary>
+            Returns the specified Boolean value as an array of bytes
+            </summary>
+            <param name="array">The return array: bytes[1]</param>
+            <param name="value">A Boolean value</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToBoolean(System.Byte[],System.Int32)">
+            <summary>
+            Returns a Boolean value converted from one byte at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes. </param>
+            <param name="startIndex">The starting position within value. </param>
+            <returns>true if the byte at startIndex in value is nonzero; otherwise, false.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Char)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Char)">
+            <summary>
+            Returns the specified Unicode character value as an array of bytes.
+            </summary>
+            <param name="value">A character to convert.</param>
+            <returns>An array of bytes with length 2.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Char)">
+            <summary>
+            Returns the specified Unicode character value as an array of bytes.
+            </summary>
+            <param name="array">The return array: bytes[2]</param>
+            <param name="value">A character to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToChar(System.Byte[],System.Int32)">
+            <summary>
+            Returns a Unicode character converted from two bytes at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A character formed by two bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Int16)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Int16)">
+            <summary>
+            Returns the specified 16-bit signed integer value as an array of bytes.
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 2.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Int16)">
+            <summary>
+            Returns the specified 16-bit signed integer value as an array of bytes.
+            </summary>
+            <param name="array">The return array: bytes[2]</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToInt16(System.Byte[],System.Int32)">
+            <summary>
+            Returns a 16-bit signed integer converted from two bytes at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A 16-bit signed integer formed by two bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.UInt16)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.UInt16)">
+            <summary>
+            Returns the specified 16-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 2.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.UInt16)">
+            <summary>
+            Returns the specified 16-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="array">The return array: byte[]</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Int32,System.UInt16)">
+            <summary>
+            Returns the specified 16-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="array">The return array: byte[]</param>
+            <param name="offset">Offset into the array</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToUInt16(System.Byte[],System.Int32)">
+            <summary>
+            Returns a 16-bit unsigned integer converted from two bytes at a specified position in a byte array.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A 16-bit unsigned integer formed by two bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Int32)">
+            <summary>
+            Returns the specified 32-bit signed integer value as an array of bytes.
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 4.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Int32)">
+            <summary>
+            Returns the specified 32-bit signed integer value as an array of bytes.
+            </summary>
+            <param name="array">The return array: byte[]</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToInt32(System.Byte[],System.Int32)">
+            <summary>
+            Returns a 32-bit signed integer converted from four bytes at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A 32-bit signed integer formed by four bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.UInt32)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.UInt32)">
+            <summary>
+            Returns the specified 32-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 4.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.UInt32)">
+            <summary>
+            Returns the specified 32-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="array">The return array: byte[4]</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToUInt32(System.Byte[],System.Int32)">
+            <summary>
+            Returns a 32-bit unsigned integer converted from four bytes at a specified position in a byte array.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A 32-bit unsigned integer formed by four bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Int64)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Int64)">
+            <summary>
+            Returns the specified 64-bit signed integer value as an array of bytes.
+            </summary>
+            <param name="value">The number to convert. </param>
+            <returns>An array of bytes with length 8.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Int64)">
+            <summary>
+            Returns the specified 64-bit signed integer value as an array of bytes.
+            </summary>
+            <param name="array">The return array: byte[8]</param>
+            <param name="value">The number to convert. </param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToInt64(System.Byte[],System.Int32)">
+            <summary>
+            Returns a 64-bit signed integer converted from eight bytes at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A 64-bit signed integer formed by eight bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.UInt64)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.UInt64)">
+            <summary>
+            Returns the specified 64-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 8.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.UInt64)">
+            <summary>
+            Returns the specified 64-bit unsigned integer value as an array of bytes.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="array">The return array: byte[8]</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToUInt64(System.Byte[],System.Int32)">
+            <summary>
+            Returns a 64-bit unsigned integer converted from eight bytes at a specified position in a byte array.
+            This API is not CLS-compliant. 
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A 64-bit unsigned integer formed by the eight bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Single)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Single)">
+            <summary>
+            Returns the specified single-precision floating point value as an array of bytes.
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 4.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Single)">
+             <summary>
+             Returns the specified single-precision floating point value as an array of bytes.
+             </summary>
+            <param name="array">The return array: byte[4]</param>
+             <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToSingle(System.Byte[],System.Int32)">
+            <summary>
+            Returns a single-precision floating point number converted from four bytes at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A single-precision floating point number formed by four bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.InsertValueIntoArray(System.Byte[],System.Int32,System.Double)">
+            <summary>
+            Inserts a value at a specified position in a byte array.
+            </summary>
+            <param name="data">The array into which you want to insert the specified value.</param>
+            <param name="startIndex">The position in the array where you want to insert the specified value.</param>
+            <param name="value">The value you want to insert into the array.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Double)">
+            <summary>
+            Returns the specified double-precision floating point value as an array of bytes.
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>An array of bytes with length 8.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.GetBytes(System.Byte[],System.Double)">
+            <summary>
+            Returns the specified double-precision floating point value as an array of bytes.
+            </summary>
+            <param name="array">The return array: byte[8]</param>
+            <param name="value">The number to convert.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.ToDouble(System.Byte[],System.Int32)">
+            <summary>
+            Returns a double-precision floating point number converted from eight bytes at a specified position in a byte array.
+            </summary>
+            <param name="value">An array of bytes.</param>
+            <param name="startIndex">The starting position within value.</param>
+            <returns>A double precision floating point number formed by eight bytes beginning at startIndex.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.DoubleToInt64Bits(System.Double)">
+            <summary>
+            Converts the specified double-precision floating point number to a 64-bit signed integer.
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>A 64-bit signed integer whose value is equivalent to value.</returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.BitConverter.Int64BitsToDouble(System.Int64)">
+            <summary>
+            Converts the specified 64-bit signed integer to a double-precision floating point number.
+            </summary>
+            <param name="value">The number to convert.</param>
+            <returns>A double-precision floating point number whose value is equivalent to value.</returns>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SharedMembers">
+            <summary>
+            Reflectively access shared members
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SharedMembers.Get(System.AppDomain,System.String)">
+            <summary>
+            Get the shared members in a hash table indexed by member name with value of type Info
+            </summary>
+            <param name="theDomain"></param>
+            <param name="sharedMemberName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SharedMembers.Info">
+            <summary>
+            Information about a shared member; includes ToString method
+            </summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.SharedMembers.Info.IsScalar">
+            <summary>
+            True iff the member is scalar (else Array)
+            </summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.SharedMembers.Info.FieldInfo">
+            <summary>
+            Information about the field
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SharedMembers.Info.#ctor(System.Boolean,System.Reflection.FieldInfo)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isScalar"></param>
+            <param name="fieldInfo"></param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SharedMembers.Info.ToString">
+            <summary>
+            Convert to string
+            </summary>
+            <remarks>
+            Scalar conversion is via base type method
+            Array conversion iterates thru the members to build a string
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SerialComm">
+            <summary>
+            Sends and receives from a serial port.
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SerialComm.#ctor(System.String,Samraksh.Components.Utility.SerialComm.ReceiveCallback)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="serialPortName">Serial port name (e.g. COM1)</param>
+            <param name="receiveCallback">Optional callback method to process incoming data.</param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SerialComm.Open">
+            <summary>
+            Open the port
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SerialComm.Write(System.Char)">
+            <summary>
+            Write a single char
+            </summary>
+            <param name="theChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SerialComm.Write(System.Char[])">
+            <summary>
+            Write a char array to the port
+            </summary>
+            <param name="theChars"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SerialComm.Write(System.String)">
+            <summary>
+            Write a string to the port
+            </summary>
+            <param name="str">The string to write</param>
+            <remarks>Flushes the port after writing the bytes to ensure it all gets sent.</remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SerialComm.PortHandler(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            Handle a read event
+            </summary>
+            <remarks>Reads the incoming data and calls a user-provided method to process it.</remarks>
+            <param name="sender">The sender</param>
+            <param name="e">The event args</param>
+        </member>
+        <member name="P:Samraksh.Components.Utility.SerialComm.Port">
+            <summary>Serial port name</summary>
+        </member>
+        <member name="E:Samraksh.Components.Utility.SerialComm.DataReceived">
+            <summary>Client callback (can be null)</summary>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SerialComm.ReceiveCallback">
+            <summary>Delegate for read callback</summary>
+            <param name="readBytes">Bytes read</param>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SimpleTimerBase">
+            <summary>
+            Simplified timer. Makes it easier to manage one-shot and periodic timers
+            </summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.SimpleTimerBase.InitialDueTime">
+            <summary>Initially-specified due time</summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.SimpleTimerBase.InitialPeriod">
+            <summary>Initially-specified period</summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.SimpleTimerBase.CurrDueTime">
+            <summary>Current due time</summary>
+        </member>
+        <member name="F:Samraksh.Components.Utility.SimpleTimerBase.CurrPeriod">
+            <summary>Current period</summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimpleTimerBase.Start">
+            <summary>
+            Start (or restart) the timer
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimpleTimerBase.Stop">
+            <summary>
+            Stop the timer
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimpleTimerBase.CallBack(System.Object)">
+            <summary>
+            Prevent disposal during callback
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:Samraksh.Components.Utility.SimpleTimerBase.UserCallback">
+            <summary>User callback</summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.SimpleTimerBase.CallBackValue">
+            <summary>Call back value</summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.SimpleTimerBase.StartTime">
+            <summary>
+            Timer start time
+            </summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.SimpleTimerBase.IsStopped">
+            <summary>
+            Check if the timer is stopped
+            </summary>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SimpleTimer">
+            <summary>
+            Timer with a simplified interface
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimpleTimer.#ctor(System.Threading.TimerCallback,System.Object,System.Int32)">
+            <summary>
+            This creates a one-shot timer since the period is 0
+            </summary>
+            <param name="userCallback"></param>
+            <param name="callBackValue"></param>
+            <param name="dueTime"></param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimpleTimer.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)">
+            <summary>
+            This creates a periodic timer
+            </summary>
+            <param name="userCallback"></param>
+            <param name="callBackValue"></param>
+            <param name="dueTime"></param>
+            <param name="period"></param>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SimpleOneshotTimer">
+            <summary>
+            Simple one-shot timer
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimpleOneshotTimer.#ctor(System.Threading.TimerCallback,System.Object,System.Int32)">
+            <summary>
+            One-Shot Timer
+            </summary>
+            <param name="userCallback"></param>
+            <param name="callBackValue"></param>
+            <param name="dueTime"></param>
+        </member>
+        <member name="T:Samraksh.Components.Utility.SimplePeriodicTimer">
+            <summary>
+            Simple periodic timer
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.SimplePeriodicTimer.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)">
+            <summary>
+            Periodic Timer
+            </summary>
+            <param name="userCallback"></param>
+            <param name="callBackValue"></param>
+            <param name="dueTime"></param>
+            <param name="period"></param>
+        </member>
+        <member name="T:Samraksh.Components.Utility.VersionInfo">
+            <summary>
+            Get version info
+            </summary>
+            <remarks>
+            See http://stackoverflow.com/a/1601079/468523
+            </remarks>
+        </member>
+        <member name="F:Samraksh.Components.Utility.VersionInfo._theAppVersion">
+            <summary>
+            The version for which info is required
+            </summary>
+        </member>
+        <member name="M:Samraksh.Components.Utility.VersionInfo.Initialize(System.Reflection.Assembly)">
+            <summary>
+            Initialize the version
+            </summary>
+            <remarks>Skip this if you want version info from the assembly in which this class resides</remarks>
+            <param name="theAssembly"></param>
+        </member>
+        <member name="M:Samraksh.Components.Utility.VersionInfo.VersionBuild(System.Reflection.Assembly)">
+            <summary>
+            Initialize assembly value and return a text string with version and build info
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Components.Utility.VersionInfo.VersionBuild">
+            <summary>
+            Return a text string with version and build info
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Samraksh.Components.Utility.VersionInfo.VirtualFenceAppVersion">
+            <summary>
+            Return a text string with virtual fence's version info
+            </summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.VersionInfo.AppName">
+            <summary>
+            Return a text string with application name
+            </summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.VersionInfo.AppVersion">
+            <summary>
+            Current build Major.Minor version info
+            </summary>
+        </member>
+        <member name="P:Samraksh.Components.Utility.VersionInfo.BuildDateTime">
+            <summary>
+            Current build DateTime
+            </summary>
+        </member>
+    </members>
+</doc>

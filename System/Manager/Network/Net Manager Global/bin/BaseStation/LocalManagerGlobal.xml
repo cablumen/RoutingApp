@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LocalManagerGlobal</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal">
+            <summary>
+            Global items for local manager (includes Local Client (Maintainer node) and Local Server (field nodes)
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.MessageNumLength">
+            <summary>
+            Last received message number
+            </summary>
+        </member>
+        <member name="P:Samraksh.Manager.LocalManager.LocalManagerGlobal.MessageNumSent">
+            <summary>
+            Message number sent
+            </summary>
+            <remarks>Issue #49. "Specify and implement behavior for delayed response in Maintainer"</remarks>
+            <remarks>Bill Leal 2017.03.29</remarks>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages">
+            <summary>
+            Messages to send
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToServer">
+            <summary>
+            Messages to Fence and Routing nodes (server)
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToServer.SendPing(Samraksh.eMote.Net.MACPipe,System.UInt16)">
+            <summary>
+            Send ping message to field mote
+            </summary>
+            <param name="macPipe"></param>
+            <param name="address"></param>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToServer.SendRequestLCD(Samraksh.eMote.Net.MACPipe,System.UInt16)">
+            <summary>
+            Send message to request field mote's current LCD value
+            </summary>
+            <param name="macPipe"></param>
+            <param name="address"></param>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToServer.SendReset(Samraksh.eMote.Net.MACPipe,System.UInt16)">
+            <summary>
+            Send message to request that field mote reset
+            </summary>
+            <param name="macPipe"></param>
+            <param name="address"></param>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToServer.SendRequestAppState(Samraksh.eMote.Net.MACPipe,System.String,System.UInt16)">
+            <summary>
+            Send message to request specific state from field mote
+            </summary>
+            <param name="macPipe"></param>
+            <param name="appStateName"></param>
+            <param name="address"></param>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToClient">
+            <summary>
+            Messages to Maintainer (client)
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToClient.SendPong(Samraksh.eMote.Net.MACPipe,System.UInt16,System.Int32)">
+            <summary>
+            Send Pong reply
+            </summary>
+            <param name="macPipe"></param>
+            <param name="dest"></param>
+            <param name="messageNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToClient.SendCurrLCD(Samraksh.eMote.Net.MACPipe,System.UInt16,System.Char[],System.Int32)">
+            <summary>
+            Send current LCD value
+            </summary>
+            <param name="macPipe"></param>
+            <param name="dest"></param>
+            <param name="currLCDChar"></param>
+            <param name="messageNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToClient.SendNowResetting(Samraksh.eMote.Net.MACPipe,System.UInt16,System.Int32)">
+            <summary>
+            Send message that now resetting
+            </summary>
+            <param name="macPipe"></param>
+            <param name="dest"></param>
+            <param name="messageNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToClient.SendBooting(Samraksh.eMote.Net.MACPipe,System.UInt16,System.Int32)">
+            <summary>
+            Send message that now booting
+            </summary>
+            <param name="macPipe"></param>
+            <param name="dest"></param>
+            <param name="messageNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.SendMessages.ToClient.SendAppState(Samraksh.eMote.Net.MACPipe,System.UInt16,System.String,System.String,System.Int32)">
+            <summary>
+            Send app state
+            </summary>
+            <param name="macPipe"></param>
+            <param name="dest"></param>
+            <param name="appStateName"></param>
+            <param name="appStateVal"></param>
+            <param name="messageNum"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages">
+            <summary>
+            Parse messages from server and from client
+            </summary>
+            <remarks>
+            The first byte of a message is the message type. The next 4 are the message number. The balance is the message itself.
+            </remarks>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages.GetMessageNum(System.Byte[],System.Int32@)">
+            <summary>
+            Get the message number (and update idx)
+            </summary>
+            <param name="msgBytes"></param>
+            <param name="idx"></param>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages.FromClient">
+            <summary>
+            Parse messages received by Server from Client
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages.FromClient.ParseRequestAppState(System.Byte[],System.Int32,System.String@)">
+            <summary>
+            Parse RequestAppState message
+            </summary>
+            <param name="msgBytes"></param>
+            <param name="idx"></param>
+            <param name="appStateName"></param>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages.FromServer">
+            <summary>
+            Parse messages received by Client (Maintainer) from Server (Fence, Relay)
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages.FromServer.ParseCurrLCD(System.Byte[],System.String@,System.Int32)">
+            <summary>
+            Parse CurrLCD message
+            </summary>
+            <param name="msgBytes"></param>
+            <param name="lcdVals"></param>
+            <param name="idx"></param>
+        </member>
+        <member name="M:Samraksh.Manager.LocalManager.LocalManagerGlobal.ParseMessages.FromServer.ParseAppState(System.Byte[],System.String@,System.String@,System.Int32)">
+            <summary>
+            Parse AppState message
+            </summary>
+            <remarks>
+            Message content is a string consisting of app state name and value, separated by space
+            </remarks>
+            <param name="msgBytes"></param>
+            <param name="appStateName"></param>
+            <param name="appStateVal"></param>
+            <param name="idx"></param>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.ControllerMessage">
+            <summary>
+            Controller messages
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.ControllerMessage.Ping">
+            <summary>
+            Ping managed nodes
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.ControllerMessage.RequestLCD">
+            <summary>
+            Request current LCD values from managed nodes
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.ControllerMessage.Reset">
+            <summary>
+            Request that managed nodes reset
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.ControllerMessage.RequestAppState">
+            <summary>
+            Request that specified app state be sent
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.AppNodeMessage">
+            <summary>
+            App node messages
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.AppNodeMessage.Pong">
+            <summary>
+            Reply with pong
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.AppNodeMessage.CurrLCD">
+            <summary>
+            Reply with current LCD values
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.AppNodeMessage.NowResetting">
+            <summary>
+            Reply that now resetting
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.AppNodeMessage.Booting">
+            <summary>
+            Broadcast that starting
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.AppNodeMessage.AppState">
+            <summary>
+            Reply with app state
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared">
+            <summary>
+            Shared variables
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVarNames">
+            <summary>
+            Names of the shared variables
+            </summary>
+            <remarks>The value of each constant must be exactly the same as the Shared Variable name</remarks>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVarNames.Parent">
+            <summary>Node parent</summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVarNames.ProgramVersion">
+            <summary>Program Version</summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVarNames.DisplacementDetection">
+            <summary>Displacement Detection</summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVarNames.DisplacementConfirmation">
+            <summary>Displacement Confirmatiion</summary>
+        </member>
+        <member name="T:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVars">
+            <summary>
+            Shared variables
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVars.Parent">
+            <summary>Node parent</summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVars.ProgramVersion">
+            <summary>Program Version</summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVars.DisplacementDetection">
+            <summary>Displacement Detection</summary>
+        </member>
+        <member name="F:Samraksh.Manager.LocalManager.LocalManagerGlobal.Shared.SharedVars.DisplacementConfirmation">
+            <summary>Displacement Confirmation</summary>
+        </member>
+    </members>
+</doc>

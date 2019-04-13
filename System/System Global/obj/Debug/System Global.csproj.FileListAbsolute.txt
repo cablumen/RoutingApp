@@ -1,0 +1,50 @@
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\le\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\be\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\le\SystemGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\be\SystemGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\SystemGlobal.XML
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\SystemGlobal.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\le\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\le\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\be\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\be\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\LE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\BE\Samraksh_eMote_Net.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\LE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\BE\Samraksh_eMote_Net.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\Samraksh_eMote_Net.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\Samraksh_eMote_Net.pdb
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\bin\Debug\Samraksh_eMote_Net.xml
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\obj\Debug\be\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\obj\Debug\be\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\obj\Debug\le\SystemGlobal.pe
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\obj\Debug\le\SystemGlobal.pdbx
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\obj\Debug\SystemGlobal.dll
+C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\System Global\obj\Debug\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\le\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\be\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\le\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\be\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\SystemGlobal.XML
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\le\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\le\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\be\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\be\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\LE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\BE\Samraksh_eMote_Net.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\LE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\BE\Samraksh_eMote_Net.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\Samraksh_eMote_Net.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\Samraksh_eMote_Net.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\Samraksh_eMote_Net.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\be\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\be\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\le\SystemGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\le\SystemGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\SystemGlobal.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\System Global.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\TinyCLR_DebugReferences.cache

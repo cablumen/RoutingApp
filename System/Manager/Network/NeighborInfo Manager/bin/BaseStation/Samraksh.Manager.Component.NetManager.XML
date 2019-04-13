@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samraksh.Manager.Component.NeighborInfoManager</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.Manager.NetManager.NeighborInfoManager">
+            <summary>
+            Network manager
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.NetManager.NeighborInfoManager.Initialize(Samraksh.eMote.Net.MACBase)">
+            <summary>
+            Initialize neighborinfo manager
+            </summary>
+            <param name="routing"></param>
+            <param name="macBase"></param>
+        </member>
+        <member name="M:Samraksh.Manager.NetManager.NeighborInfoManager.NetManagerStreamReceive(Samraksh.eMote.Net.MAC.IMAC,System.DateTime,Samraksh.eMote.Net.Packet)">
+            <summary>
+            
+            </summary>
+            <param name="macBase"></param>
+            <param name="dateTime"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\obj\Release\Base Node.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\obj\Release\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\obj\Release\Samraksh.VirtualFence.Resources.resources
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\obj\Release\Base Node.csproj.GenerateResource.Cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\obj\Release\Samraksh.VirtualFence.Resources.tinyresources
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\obj\Release\TinyResGen.cache

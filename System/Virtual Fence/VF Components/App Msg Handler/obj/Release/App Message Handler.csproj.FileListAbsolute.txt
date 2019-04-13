@@ -1,0 +1,2 @@
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\Release\App Message Handler.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\Release\TinyCLR_DebugReferences.cache

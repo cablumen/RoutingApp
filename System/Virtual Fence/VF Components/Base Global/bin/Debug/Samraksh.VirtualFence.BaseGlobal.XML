@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samraksh.VirtualFence.BaseGlobal</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.VirtualFence.BaseGlobal">
+            <summary>
+            Global items for Base Node
+            </summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.BaseGlobal.BaseWatchdogIntervalMs">
+            <summary>
+            Base watchdog interval for Base
+            </summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.BaseGlobal.MessageIds">
+            <summary>
+            Base live message Ids
+            </summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.BaseGlobal.MessageIds.BaseWatchdog">
+            <summary>
+            Base is live
+            </summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.BaseGlobal.PCMessages">
+            <summary>
+            Messages from Base to PC
+            </summary>
+        </member>
+        <member name="T:Samraksh.VirtualFence.BaseGlobal.PCMessages.Compose">
+            <summary>
+            Compose the message string
+            </summary>
+        </member>
+        <member name="M:Samraksh.VirtualFence.BaseGlobal.PCMessages.Compose.BaseWatchdog(System.Int32)">
+            <summary>
+            Base is live message
+            </summary>
+            <param name="msgNum"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

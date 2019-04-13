@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samraksh.Manager.Component.NetManagerGlobal</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal">
+            <summary>
+            Global items for Net Manager
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.NetManager.NetManagerGlobal.HeartbeatMessageSize">
+            <summary>
+            Size of heartbeat messages
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.NetManager.NetManagerGlobal.MsgBytes">
+            <summary>
+            Message byte array
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal.MessageIds">
+            <summary>
+            Net Manager IDs
+            </summary>
+        </member>
+        <member name="F:Samraksh.Manager.NetManager.NetManagerGlobal.MessageIds.Heartbeat">
+            <summary>
+            Heartbeat message ID
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages">
+            <summary>
+            Mote Messages
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages.Compose">
+            <summary>
+            Create messages to send
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages.Compose.Heartbeat(System.Byte[],System.UInt16,System.UInt16,Samraksh.VirtualFence.SystemGlobal.NodeTypes,System.UInt16,System.Byte)" -->
+        <!-- Badly formed XML comment ignored for member "M:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages.Compose.Heartbeat(System.Byte[],System.UInt16,System.UInt16,Samraksh.VirtualFence.SystemGlobal.NodeTypes,System.UInt16,System.Byte,System.UInt16[],System.Byte[],System.UInt16[],System.UInt16[],System.Byte[],System.Byte[],System.Byte[],System.Byte)" -->
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages.Parse">
+            <summary>
+            Parse net health manager received
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages.Parse.HeartBeat(System.Byte[],System.UInt16@,System.UInt16@,Samraksh.VirtualFence.SystemGlobal.NodeTypes@,System.UInt16@,System.Byte@)">
+            <summary>
+            Parse heartbeat message
+            </summary>
+            <param name="msgBytes"></param>
+            <param name="originatorId"></param>
+            <param name="heartbeatNumber"></param>
+            <param name="nodeType"></param>
+            <param name="parent"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Samraksh.Manager.NetManager.NetManagerGlobal.MoteMessages.Parse.HeartBeat(System.Byte[],System.UInt16@,System.UInt16@,Samraksh.VirtualFence.SystemGlobal.NodeTypes@,System.UInt16@,System.Byte@,System.Byte@,System.UInt16[]@,System.Byte[]@,System.UInt16[]@,System.UInt16[]@,System.Byte[]@,System.Byte[]@,System.Byte[]@,System.Byte@)" -->
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal.PCMessages">
+            <summary>
+            PC Messages
+            </summary>
+        </member>
+        <member name="T:Samraksh.Manager.NetManager.NetManagerGlobal.PCMessages.Compose">
+            <summary>
+            Compose messages to send to PC
+            </summary>
+        </member>
+        <member name="M:Samraksh.Manager.NetManager.NetManagerGlobal.PCMessages.Compose.Heartbeat(System.Int32,System.Int32,Samraksh.VirtualFence.SystemGlobal.NodeTypes,System.Int32)">
+            <summary>
+            Compose Heartbeat message to send to PC
+            </summary>
+            <param name="originatorId"></param>
+            <param name="heartbeatNumber"></param>
+            <param name="nodeType"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+            
+        </member>
+    </members>
+</doc>

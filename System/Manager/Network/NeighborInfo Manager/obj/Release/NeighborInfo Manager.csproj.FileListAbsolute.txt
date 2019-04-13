@@ -1,0 +1,2 @@
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\NeighborInfo Manager\obj\Release\NeighborInfo Manager.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\NeighborInfo Manager\obj\Release\TinyCLR_DebugReferences.cache
