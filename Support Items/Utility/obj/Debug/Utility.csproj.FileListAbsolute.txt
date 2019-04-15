@@ -40,6 +40,8 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\bin\D
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\bin\Debug\Samraksh_eMote_DotNow.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\bin\Debug\Samraksh_eMote_DotNow.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\bin\Debug\Samraksh_eMote_DotNow.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\obj\Debug\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\obj\Debug\be\Utility.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\obj\Debug\be\Utility.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\Support Items\Utility\obj\Debug\le\Utility.pe

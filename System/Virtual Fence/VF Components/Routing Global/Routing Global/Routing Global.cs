@@ -525,6 +525,28 @@ namespace Samraksh.VirtualFence.Components
             return mac.IsMsgIDValid(index) ? index : (ushort)999;
         }
 
+        public static ushort SendToNeighbor(MACPipe mac, ushort next_neighbor, byte[] msgBytes, int length)
+        {
+            ushort[] _neighborList = MACBase.NeighborListArray();
+            mac.NeighborList(_neighborList); // Get current neighborlist
+            if (Array.IndexOf(_neighborList, next_neighbor) == -1)
+            {
+                Debug.Print(next_neighbor + " not in neighbor list");
+                return 0;
+            }
+            // If in a reset, do not forward
+            if (RoutingGlobal._color == Color.Red)
+            {
+#if DBG_VERBOSE
+                Debug.Print("\tIn a Reset wave... not forwarded");
+#endif
+                return 999;
+            }
+
+            ushort index = mac.EnqueueToSend(next_neighbor, msgBytes, 0, (ushort)length);
+            return mac.IsMsgIDValid(index) ? index : (ushort)999;
+        }
+
         public static void CleanseCandidateTable(MACPipe pipe)
         {
             ushort[] _neighborList = MACBase.NeighborListArray();

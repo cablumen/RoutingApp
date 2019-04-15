@@ -19,10 +19,12 @@
 // Base Node
 #elif RELAY_NODE
 // Relay Node
+#elif CLIENT_NODE
+// Client Node
 #elif FAKE_FENCE
 #error Fake Fence not supported
 #else
-#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, FAKE_FENCE
+#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, CLIENT_NODE, FAKE_FENCE
 #endif
 
 using System;
@@ -34,7 +36,7 @@ using Samraksh.eMote.Net.MAC;
 using Samraksh.VirtualFence;
 using Samraksh.VirtualFence.Components;
 
-#if RELAY_NODE || BASE_STATION
+#if RELAY_NODE || CLIENT_NODE || BASE_STATION
 using System.Threading;
 #endif
 
@@ -45,7 +47,7 @@ namespace Samraksh.Manager.NetManager
     /// </summary>
     public static class NeighborInfoManager
     {
-#if RELAY_NODE || BASE_STATION
+#if RELAY_NODE || CLIENT_NODE || BASE_STATION
         // ReSharper disable once NotAccessedField.Local
         private static Timer _nbrInfoTimer;
         private static int _numBeat;
@@ -77,7 +79,7 @@ namespace Samraksh.Manager.NetManager
             //_neighborInfoManagerPipe = new SimpleCSMAStreamChannel(macBase, (byte)AppGlobal.MacPipeIds.NetworkManager);
             _neighborInfoManagerPipe = new MACPipe(macBase, SystemGlobal.MacPipeIds.NeighborInfoManager);
             _neighborInfoManagerPipe.OnReceive += NetManagerStreamReceive;
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             _neighborInfoManagerPipe.OnSendStatus += OnSendStatus;
 #endif
 
@@ -85,7 +87,7 @@ namespace Samraksh.Manager.NetManager
             Debug.Print("***** subscribing to Neighborhood Manager on " + SystemGlobal.MacPipeIds.NeighborInfoManager);
 #endif
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
 #if FastHeartbeat
             _nbrInfoTimer = new Timer(Send_AdvancedHeartbeat, null, 180 * 10000, 60 * 1000);
 #else
@@ -285,7 +287,7 @@ namespace Samraksh.Manager.NetManager
                     Debug.Print("");
 #endif
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
                     // If we're the originator of the message, or if TTL-1 is 0, do not pass it on.
                     if (originator == _neighborInfoManagerPipe.MACRadioObj.RadioAddress || --TTL == 0)
                     {
@@ -376,7 +378,7 @@ namespace Samraksh.Manager.NetManager
             }
         }
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
         /*CAUTION: Any change in the advanced heartbeat structure should be accounted for in variables
          * NetManagerGlobal.AdvHeartbeatFixedSize and NetManagerGlobal.EachNeighborInfoSize
          */

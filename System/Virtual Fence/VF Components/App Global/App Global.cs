@@ -47,6 +47,8 @@ namespace Samraksh.VirtualFence.Components
 		{
 			/// <summary>Detection has occurred</summary>
 			Detect = 0,
+            Send = 1,
+            Recieve = 2,
 		}
 
         public static ushort SendToTempParent(MACPipe mac, byte[] msgBytes, int length)
@@ -65,7 +67,10 @@ namespace Samraksh.VirtualFence.Components
 		{
 			/// <summary>Detection, no classification yet</summary>
 			Detect = (byte)'D',
-
+            /// <summary>TCP, no classification yet</summary>
+            Send = (byte)'S',
+            /// <summary>UDP, no classification yet</summary>
+            Recieve = (byte)'R',
 			/// <summary>Provisional Human</summary>
 			ProvisionalHuman = (byte)'h',
 			/// <summary>Provisional Non-human</summary>
@@ -135,6 +140,84 @@ namespace Samraksh.VirtualFence.Components
 
 					return idx;
 				}
+                public static int SendPacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int TCPNumber, byte TTL, int pathLength, ushort[] path)
+                {
+                    var idx = 0;
+
+                    // Detection message type
+                    msgBytes[idx] = (byte)MessageIds.Send;
+                    idx++;
+
+                    // Classification
+                    msgBytes[idx] = (byte)classificatonType;
+                    idx++;
+
+                    // Detection message number
+                    var TCPNum = (ushort)Math.Min(TCPNumber, ushort.MaxValue);
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, TCPNum);
+                    idx += sizeof(ushort);
+
+                    // Message originator
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, originator);
+                    idx += sizeof(ushort);
+
+                    // TTL
+                    msgBytes[idx] = (byte)TTL;
+                    idx++;
+
+                    // Path Length
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, pathLength);
+                    idx += sizeof(ushort);
+
+                    // Add Path
+                    int i;
+                    for (i = 0; i < pathLength; i = i + 1)
+                    {
+
+                        BitConverter.InsertValueIntoArray(msgBytes, idx, path[i]);
+                        idx += sizeof(ushort);
+                    }
+                    return idx;
+                }
+                public static int RecievePacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int UDPNumber, byte TTL, int pathLength, ushort[] path)
+                {
+                    var idx = 0;
+
+                    // Detection message type
+                    msgBytes[idx] = (byte)MessageIds.Recieve;
+                    idx++;
+
+                    // Classification
+                    msgBytes[idx] = (byte)classificatonType;
+                    idx++;
+
+                    // Detection message number
+                    var UDPNum = (ushort)Math.Min(UDPNumber, ushort.MaxValue);
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, UDPNum);
+                    idx += sizeof(ushort);
+
+                    // Message originator
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, originator);
+                    idx += sizeof(ushort);
+
+                    // TTL
+                    msgBytes[idx] = (byte)TTL;
+                    idx++;
+
+                    // Path Length
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, pathLength);
+                    idx += sizeof(ushort);
+
+                    // Add Path
+                    int i;
+                    for (i = 0; i < pathLength; i = i + 1)
+                    {
+
+                        BitConverter.InsertValueIntoArray(msgBytes, idx, path[i]);
+                        idx += sizeof(ushort);
+                    }
+                    return idx;
+                }
 			}
 
 			/// <summary>
@@ -166,6 +249,72 @@ namespace Samraksh.VirtualFence.Components
                     TTL = msgBytes[idx];
                     idx += 1;
 				}
+                public static ushort[] SendPacket(byte[] msgBytes, out ClassificationType classificationType, 
+                    out ushort TCPNumber, out ushort originator, out byte TTL, out ushort pathLength)
+                {
+                    var idx = 1; // Start at 1 since we've already checked the message ID
+
+                    classificationType = (ClassificationType)msgBytes[idx];
+                    idx += 1;
+
+                    TCPNumber = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
+                    originator = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
+                    TTL = msgBytes[idx];
+                    idx += 1;
+                    
+                    pathLength = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
+                    ushort[] path = new ushort[pathLength];
+                    int i;
+                    for(i = 0; i < pathLength; i = i + 1){
+                        path[i] = BitConverter.ToUInt16(msgBytes, idx);
+                        idx += sizeof(ushort);
+                    }
+                    return path;
+                }
+                public static ushort[] RecievePacket(byte[] msgBytes, out ClassificationType classificationType,
+                    out ushort UDPNumber, out ushort originator, out byte TTL, out ushort pathLength, out ushort cur_node)
+                {
+                    var idx = 1; // Start at 1 since we've already checked the message ID
+
+                    classificationType = (ClassificationType)msgBytes[idx];
+                    idx += 1;
+
+                    UDPNumber = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
+                    originator = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
+                    TTL = msgBytes[idx];
+                    idx += 1;
+
+                    pathLength = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
+                    ushort[] path_minus_self = new ushort[pathLength - 1];
+                    int i;
+                    for (i = 0; i < pathLength - 1; i = i + 1)
+                    {
+                        path_minus_self[i] = BitConverter.ToUInt16(msgBytes, idx);
+                        idx += sizeof(ushort);
+                    }
+                    if (pathLength > 1)
+                    {
+                        cur_node = BitConverter.ToUInt16(msgBytes, idx);
+                        idx += sizeof(ushort);
+                    }
+                    else
+                    {
+                        cur_node = 0;
+                    }
+                    return path_minus_self;
+                }
 			}
 		}
 #endif

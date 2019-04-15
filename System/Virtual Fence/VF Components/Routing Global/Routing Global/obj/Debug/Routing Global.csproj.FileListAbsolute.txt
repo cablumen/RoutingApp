@@ -55,6 +55,12 @@ C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\le\RoutingGlobal.pdbx
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\RoutingGlobal.dll
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\RoutingGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Routing Global.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Samraksh.VirtualFence.Components.Resources.resources
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Routing Global.csproj.GenerateResource.Cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Samraksh.VirtualFence.Components.Resources.tinyresources
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\TinyResGen.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\le\RoutingGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\be\RoutingGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\le\RoutingGlobal.pdb
@@ -91,16 +97,6 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Utility.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Samraksh_eMote_DotNow.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Samraksh_eMote_DotNow.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Routing Global.csprojResolveAssemblyReference.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\TinyCLR_DebugReferences.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Samraksh.VirtualFence.Components.Resources.resources
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Routing Global.csproj.GenerateResource.Cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\Samraksh.VirtualFence.Components.Resources.tinyresources
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\TinyResGen.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\be\RoutingGlobal.pe
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\be\RoutingGlobal.pdbx
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\le\RoutingGlobal.pe
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\le\RoutingGlobal.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\RoutingGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\obj\Debug\RoutingGlobal.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\SystemGlobal.pdb

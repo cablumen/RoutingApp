@@ -61,6 +61,10 @@ C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\le\FastConvergence.pdbx
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.dll
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Fast Convergence.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Samraksh.VirtualFence.Components.Resources.resources
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Fast Convergence.csproj.GenerateResource.Cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\le\FastConvergence.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\be\FastConvergence.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\le\FastConvergence.pdb
@@ -103,10 +107,6 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Samraksh_eMote_Net.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Samraksh_eMote_DotNow.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Samraksh_eMote_DotNow.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Fast Convergence.csprojResolveAssemblyReference.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\TinyCLR_DebugReferences.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Samraksh.VirtualFence.Components.Resources.resources
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Fast Convergence.csproj.GenerateResource.Cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Samraksh.VirtualFence.Components.Resources.tinyresources
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\TinyResGen.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.dll

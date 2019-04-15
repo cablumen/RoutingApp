@@ -1,0 +1,2 @@
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing\obj\Debug\Routing.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing\obj\Debug\TinyCLR_DebugReferences.cache

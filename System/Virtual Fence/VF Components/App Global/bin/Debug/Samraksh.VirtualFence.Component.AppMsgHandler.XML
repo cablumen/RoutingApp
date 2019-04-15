@@ -37,6 +37,12 @@
         <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.Detect">
             <summary>Detection, no classification yet</summary>
         </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.Send">
+            <summary>TCP, no classification yet</summary>
+        </member>
+        <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.Recieve">
+            <summary>UDP, no classification yet</summary>
+        </member>
         <member name="F:Samraksh.VirtualFence.Components.AppGlobal.ClassificationType.ProvisionalHuman">
             <summary>Provisional Human</summary>
         </member>

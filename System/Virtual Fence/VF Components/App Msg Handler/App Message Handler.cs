@@ -19,15 +19,17 @@
 // Base node
 #elif RELAY_NODE
 // Relay node
+#elif CLIENT_NODE
+// Client node
 #elif FAKE_FENCE
 // Fake fence node
 #elif PC
 // PC node
 #else
-#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, FAKE_FENCE, PC
+#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, CLIENT_NODE, FAKE_FENCE, PC
 #endif
 
-#if BASE_STATION || RELAY_NODE || FAKE_FENCE	// This code only applies to eMote nodes
+#if BASE_STATION || RELAY_NODE || CLIENT_NODE || FAKE_FENCE	// This code only applies to eMote nodes
 using System;
 using System.Collections;
 using System.Threading;
@@ -62,7 +64,7 @@ namespace Samraksh.VirtualFence.Components
         {
             AppGlobal.AppPipe = new MACPipe(macBase, SystemGlobal.MacPipeIds.App);
             AppGlobal.AppPipe.OnReceive += AppPipeReceive;
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             AppGlobal.AppPipe.OnSendStatus += OnSendStatus;
 #endif
 
@@ -182,8 +184,22 @@ namespace Samraksh.VirtualFence.Components
                     break;
             }
         }
-
-#if BASE_STATION
+#if RELAY_NODE
+        private static ushort _MACID;
+        /// <summary>
+        /// Initialize for base station (include serial)
+        /// </summary>
+        /// <param name="routing"></param>
+        /// <param name="macBase"></param>
+        /// <param name="lcd"></param>
+        /// <param name="serialComm"></param>
+        public static void Initialize(MACBase macBase, EnhancedEmoteLCD lcd, ushort macID)
+        {
+            _MACID = macID;
+            Initialize(macBase, lcd);
+        }
+#endif
+#if BASE_STATION || CLIENT_NODE
         private static SerialComm _serialComm;
         /// <summary>
         /// Initialize for base station (include serial)
@@ -293,18 +309,21 @@ namespace Samraksh.VirtualFence.Components
 #elif DBG_SIMPLE
                 Debug.Print("");
 #endif
+
                 switch ((AppGlobal.MessageIds)rcvPayloadBytes[0])
                 {
                     case AppGlobal.MessageIds.Detect:
+                        {
+
                         AppGlobal.ClassificationType classificationType;
-                        ushort detectionNumber;
                         ushort originator;
                         byte TTL;
+                        ushort detectionNumber;
 
                         AppGlobal.MoteMessages.Parse.Detection(rcvPayloadBytes, out classificationType, out detectionNumber, out originator, out TTL);
 
                         Debug.Print("\tDetect. From neighbor " + packet.Src + " # " + detectionNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
                         //	Check if originated by self or if TTL-1 = 0
                         if (originator == AppGlobal.AppPipe.MACRadioObj.RadioAddress || --TTL == 0)
                         {
@@ -371,7 +390,163 @@ namespace Samraksh.VirtualFence.Components
                         }
 #endif
                         break;
+                        }
+                    case AppGlobal.MessageIds.Send:
+                        {
+                        AppGlobal.ClassificationType classificationType;
+                        ushort originator;
+                        byte TTL;
+                        ushort pathLength;
+                        ushort sndNumber;
 
+                        ushort[] path = AppGlobal.MoteMessages.Parse.SendPacket(rcvPayloadBytes, out classificationType, out sndNumber, out originator, out TTL, out pathLength);
+                        
+                        Debug.Print("\tSend. From neighbor " + packet.Src + " # " + sndNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
+#if CLIENT_NODE
+                        Debug.Print("\tClient Recieved a send message...");
+                        //_serialComm.Write(rcvPayloadBytes);
+#elif RELAY_NODE
+                        //	Check if originated by self or if TTL-1 = 0
+                        if (originator == AppGlobal.AppPipe.MACRadioObj.RadioAddress || --TTL == 0)
+                        {
+                            return;
+                        }
+
+                        #region Uncomment when scheduler disabled
+                        // If in a reset, do not forward TODO: Change this to "spray"
+                        if (RoutingGlobal._color == Color.Red)
+                        {
+#if DBG_VERBOSE
+                            Debug.Print("\tIn a Reset wave... not forwarded");
+#endif
+                            return;
+                        }
+                        #endregion
+                        #region Uncomment when scheduler disabled
+                        /* TODO: Uncomment lines 368-394 when not using scheduler*/
+                        // Not originated by self. 
+                        // If parent is available, pass it on
+                        ushort new_path_length = (ushort)(pathLength + 1);
+                        // remove ushort in length because popping first in path
+                        byte[] routedMsg = new byte[rcvPayloadBytes.Length + sizeof(ushort)];
+                        ushort[] newPath = new ushort[new_path_length];
+                        Array.Copy(path, 0, newPath, 0, pathLength);
+                        // TODO: find a way to get the MAC VALUE
+                        newPath[pathLength] = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
+                        if (RoutingGlobal.IsParent)
+                        {
+                            var size = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sndNumber, TTL, new_path_length, newPath);
+                            var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, size);
+                            //Neighbor(AppGlobal.AppPipe, next_neighbor, routedMsg, size);
+                            if (status != 999)
+                            {
+                                RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
+#if !DBG_LOGIC
+                                Debug.Print("Updated numTriesInCurrentWindow for Parent " + RoutingGlobal.Parent + "; new value = " + RoutingGlobal.GetNumTriesInCurrentWindow_Parent());
+#endif
+                            }
+                            else //Retry once
+                            {
+#if !DBG_LOGIC
+                                Debug.Print("Retrying packet");
+#endif
+                                status = AppGlobal.SendToTempParent(AppGlobal.AppPipe, routedMsg, size);
+                                if (status != 999)
+                                {
+                                    //tmpBest.UpdateNumTriesInCurrentWindow(1);
+#if !DBG_LOGIC
+                                    //Debug.Print("Updated numTriesInCurrentWindow for TempParent " + AppGlobal.TempParent + "; new value = " + tmpBest.GetNumTriesInCurrentWindow());
+#endif
+                                }
+                            }
+                        }
+                        #endregion
+#elif BASE_STATION
+                        ushort next_neighbor = path[pathLength - 1];
+                        var size = AppGlobal.MoteMessages.Compose.RecievePacket(rcvPayloadBytes, originator, classificationType, sndNumber, TTL, pathLength, path);
+                        try
+                        {
+                            var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, rcvPayloadBytes, size);
+
+#if DBG_VERBOSE
+							Debug.Print("\n************ Detection sent to PC " + msg.Substring(1,msg.Length-2));
+#endif
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.Print("SerialComm exception for Detection message [" + size + "]\n" + ex);
+                        }
+#endif
+                        break;
+                        }
+                    case AppGlobal.MessageIds.Recieve:
+                        {
+                        AppGlobal.ClassificationType classificationType;
+                        ushort originator;
+                        byte TTL;
+                        ushort pathLength;
+                        ushort next_neighbor;
+                        ushort rcvNumber;
+
+                        ushort[] rest_of_path = AppGlobal.MoteMessages.Parse.RecievePacket(rcvPayloadBytes, out classificationType, out rcvNumber, out originator, out TTL, out pathLength, out next_neighbor);
+
+                        Debug.Print("\tRecieve. From neighbor " + packet.Src + " # " + rcvNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
+#if CLIENT_NODE
+                        _serialComm.Write(rcvPayloadBytes);
+#elif RELAY_NODE
+                        //	Check if originated by self or if TTL-1 = 0
+                        if (originator == AppGlobal.AppPipe.MACRadioObj.RadioAddress || --TTL == 0)
+                        {
+                            return;
+                        }
+
+                        #region Uncomment when scheduler disabled
+                        // If in a reset, do not forward TODO: Change this to "spray"
+                        if (RoutingGlobal._color == Color.Red)
+                        {
+#if DBG_VERBOSE
+                            Debug.Print("\tIn a Reset wave... not forwarded");
+#endif
+                            return;
+                        }
+                        #endregion
+                        #region Uncomment when scheduler disabled
+                        /* TODO: Uncomment lines 368-394 when not using scheduler*/
+                        // Not originated by self. 
+                        // If parent is available, pass it on
+                        ushort new_path_length = (ushort)(pathLength - 1);
+                        byte[] routedMsg = new byte[rcvPayloadBytes.Length - sizeof(ushort)];
+                        var size = AppGlobal.MoteMessages.Compose.RecievePacket(routedMsg, originator, classificationType, rcvNumber, TTL, new_path_length, rest_of_path);
+                        var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, routedMsg, size);
+                        if (status != 999)
+                        {
+                        RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
+#if !DBG_LOGIC
+                        Debug.Print("Updated numTriesInCurrentWindow for Parent " + RoutingGlobal.Parent + "; new value = " + RoutingGlobal.GetNumTriesInCurrentWindow_Parent());
+#endif
+                        }
+                        else //Retry once
+                        {
+#if !DBG_LOGIC
+                            Debug.Print("Retrying packet");
+#endif                      
+                            status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, routedMsg, size);
+
+                            if (status != 999)
+                            {
+                                //tmpBest.UpdateNumTriesInCurrentWindow(1);
+#if !DBG_LOGIC
+                                //Debug.Print("Updated numTriesInCurrentWindow for TempParent " + AppGlobal.TempParent + "; new value = " + tmpBest.GetNumTriesInCurrentWindow());
+#endif
+                            }
+                        }
+                        #endregion
+#elif BASE_STATION
+
+
+#endif
+                        break;
+                        }
                     default:
                         Debug.Print("AppPipeReceive unknown rcvPayloadBytes[0] ");
                         throw new ArgumentOutOfRangeException();

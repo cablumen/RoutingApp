@@ -119,6 +119,25 @@ namespace Samraksh.Components.Utility
 			}
 		}
 
+        public bool Write(byte[] bytes)
+        {
+            // Lock the write to avoid possible race conditions
+            lock (_serialCommLock)
+            {
+                try
+                {
+                    Port.Write(bytes, 0, bytes.Length);
+                    Port.Flush();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Print("SerialComm Write(String) exception " + ex);
+                    return false;
+                }
+            }
+        }
+
 		private object _serialCommLock = new object();
 
 		/// <summary>

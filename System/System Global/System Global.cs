@@ -71,6 +71,8 @@ namespace Samraksh.VirtualFence
             Base = (byte)'B',
             /// <summary>Relay</summary>
             Relay = (byte)'R',
+            /// <summary>Relay</summary>
+            Client = (byte)'C',
             /// <summary>Fence</summary>
             Fence = (byte)'F',
             /// <summary>Unknown</summary>

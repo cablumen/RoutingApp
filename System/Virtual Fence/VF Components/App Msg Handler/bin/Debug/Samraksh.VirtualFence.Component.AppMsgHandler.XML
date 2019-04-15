@@ -17,6 +17,15 @@
             <param name="macBase"></param>
             <param name="lcd"></param>
         </member>
+        <member name="M:Samraksh.VirtualFence.Components.AppMsgHandler.Initialize(Samraksh.eMote.Net.MACBase,Samraksh.Components.Utility.EnhancedEmoteLCD,Samraksh.Components.Utility.SerialComm)">
+            <summary>
+            Initialize for base station (include serial)
+            </summary>
+            <param name="routing"></param>
+            <param name="macBase"></param>
+            <param name="lcd"></param>
+            <param name="serialComm"></param>
+        </member>
         <member name="M:Samraksh.VirtualFence.Components.AppMsgHandler.AppPipeReceive(Samraksh.eMote.Net.MAC.IMAC,System.DateTime,Samraksh.eMote.Net.Packet)">
             <summary>
             Handle an App message

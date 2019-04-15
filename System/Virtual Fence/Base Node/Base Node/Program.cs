@@ -36,7 +36,7 @@ namespace Samraksh.VirtualFence
 	/// </summary>
 	public class Base
 	{
-		//private static readonly EnhancedEmoteLCD Lcd = new EnhancedEmoteLCD();
+		private static readonly EnhancedEmoteLCD _lcd = new EnhancedEmoteLCD();
 		#region unused
 		//private static SimpleCSMAStreamChannel _appStream;
 		//private static SimpleCSMAStreamChannel _routingStream;
@@ -88,7 +88,7 @@ namespace Samraksh.VirtualFence
 			Debug.Print(VersionInfo.VersionBuild(Assembly.GetExecutingAssembly()));
 			Thread.Sleep(3000);
 
-			//Lcd.Write("Base");
+            _lcd.Write("Base");
 
 			try
 			{
@@ -135,7 +135,7 @@ namespace Samraksh.VirtualFence
                 Thread.Sleep(60 * 1000);
 
 				// Initialize application message handler
-				AppMsgHandler.Initialize(macBase, null, serialComm);
+				AppMsgHandler.Initialize(macBase, _lcd, serialComm);
 
 				// Initialize network manager
 				NetManager.Initialize(macBase, serialComm);

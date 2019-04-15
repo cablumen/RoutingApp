@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Samraksh.VirtualFence.ClientNode</name>
+    </assembly>
+    <members>
+        <member name="T:Samraksh.VirtualFence.Program">
+            <summary>
+            Main program
+            </summary>
+        </member>
+        <member name="M:Samraksh.VirtualFence.Program.Main">
+            <summary>
+            The main program
+            </summary>
+            <exception cref="T:System.InvalidOperationException"></exception>
+            <exception cref="T:System.IO.IOException"></exception>
+        </member>
+    </members>
+</doc>

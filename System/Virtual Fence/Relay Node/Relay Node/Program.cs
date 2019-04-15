@@ -32,8 +32,7 @@ namespace Samraksh.VirtualFence
     public partial class Program
     {
 
-
-        //private static readonly EnhancedEmoteLCD Lcd = new EnhancedEmoteLCD();
+        private static readonly EnhancedEmoteLCD _lcd = new EnhancedEmoteLCD();
 
         /// <summary>
         /// The main program
@@ -48,7 +47,7 @@ namespace Samraksh.VirtualFence
 
             Debug.Print(DebuggingSupport.SetupBorder);
             Debug.Print(VersionInfo.VersionBuild(Assembly.GetExecutingAssembly()));
-            //Lcd.Write("Rely");
+            _lcd.Write("Rely");
 
             Thread.Sleep(3000);
             try
@@ -94,7 +93,7 @@ namespace Samraksh.VirtualFence
                 Thread.Sleep(additionalSleep * 1000);
 
                 // Initialize application message handler
-                AppMsgHandler.Initialize(macBase, null);
+                AppMsgHandler.Initialize(macBase, _lcd);
 
                 // Initialize the Net Manager
                 NetManager.Initialize(macBase);

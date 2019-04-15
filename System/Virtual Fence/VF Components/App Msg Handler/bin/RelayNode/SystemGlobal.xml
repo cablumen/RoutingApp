@@ -95,6 +95,9 @@
         <member name="F:Samraksh.VirtualFence.SystemGlobal.NodeTypes.Relay">
             <summary>Relay</summary>
         </member>
+        <member name="F:Samraksh.VirtualFence.SystemGlobal.NodeTypes.Client">
+            <summary>Relay</summary>
+        </member>
         <member name="F:Samraksh.VirtualFence.SystemGlobal.NodeTypes.Fence">
             <summary>Fence</summary>
         </member>

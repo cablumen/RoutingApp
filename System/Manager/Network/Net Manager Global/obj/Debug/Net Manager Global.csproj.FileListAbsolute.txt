@@ -58,6 +58,8 @@ C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\Debug\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\Debug\Samraksh.Manager.Component.NetManagerGlobal.dll
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Manager\Network\Net Manager Global\obj\Debug\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\Net Manager Global.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\Debug\le\Samraksh.Manager.Component.NetManagerGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\Debug\be\Samraksh.Manager.Component.NetManagerGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\Debug\le\Samraksh.Manager.Component.NetManagerGlobal.pdb
@@ -103,8 +105,6 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net 
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\Debug\Samraksh_eMote_Net.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\Debug\Samraksh_eMote_DotNow.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\bin\Debug\Samraksh_eMote_DotNow.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\Net Manager Global.csprojResolveAssemblyReference.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\be\Samraksh.Manager.Component.NetManagerGlobal.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\be\Samraksh.Manager.Component.NetManagerGlobal.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\le\Samraksh.Manager.Component.NetManagerGlobal.pe

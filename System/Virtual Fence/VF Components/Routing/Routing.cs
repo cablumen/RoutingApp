@@ -22,12 +22,14 @@
 // Base node
 #elif RELAY_NODE
 // Relay node
+#elif CLIENT_NODE
+// Client node
 #elif FENCE_NODE
 // Fence node
 #elif FAKE_FENCE
 // Fake fence node
 #else
-#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, FENCE_NODE, FAKE_FENCE
+#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, CLIENT_NODE, FENCE_NODE, FAKE_FENCE
 #endif
 
 using System;
@@ -73,7 +75,7 @@ namespace Samraksh.VirtualFence.Components
         {
             //_routingPipe = routingPipe;
 #if !DBG_LOGIC
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             Debug.Print("Initializing routing on Relay Node");
 #elif BASE_STATION
 			Debug.Print("Initializing routing on Base Station");
@@ -103,7 +105,7 @@ namespace Samraksh.VirtualFence.Components
 				//lcd.Write("Base");
 
 #endif
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
                 _routingPipe.OnReceive += RelayNodeReceive;
                 _routingPipe.OnSendStatus += OnSendStatus;
 #if !DBG_LOGIC
@@ -230,7 +232,7 @@ namespace Samraksh.VirtualFence.Components
         {
             //_routingPipe = routingPipe;
 #if !DBG_LOGIC
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             Debug.Print("Initializing routing on Relay Node");
 #elif BASE_STATION
 			Debug.Print("Initializing routing on Base Station");
@@ -262,7 +264,7 @@ namespace Samraksh.VirtualFence.Components
 				//lcd.Write("Base");
 
 #endif
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
                 _routingPipe.OnReceive += RelayNodeReceive;
                 _routingPipe.OnSendStatus += OnSendStatus;
 #if !DBG_LOGIC
@@ -298,7 +300,7 @@ namespace Samraksh.VirtualFence.Components
             }
         }
         #region unused
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
         ///// <summary>
         ///// Send to parent on designated channel
         ///// </summary>
@@ -433,7 +435,7 @@ namespace Samraksh.VirtualFence.Components
             var msgBytes = new byte[7];
             var size = RoutingGlobal.ComposeMessages.CreateBeacon(msgBytes, RoutingGlobal.BestEtx, (ushort)_beaconNum, RoutingGlobal.GetPathEWRNP(), RoutingGlobal.Parent);
             //Debug.Print("\t\tmsgBytes size reported: " + size);
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             RoutingGlobal.BroadcastBeacon(_routingPipe, msgBytes, size); // Tracks link metrics
 #elif BASE_STATION
             SystemGlobal.Broadcast(_routingPipe, msgBytes, size);
@@ -590,7 +592,7 @@ namespace Samraksh.VirtualFence.Components
             Debug.Print("*** Received MAC Send Status " + dateTime + ", send packet status " + sendPacketStatus + " to " + dest);
         }*/
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
         /// <summary>
         /// 
         /// </summary>

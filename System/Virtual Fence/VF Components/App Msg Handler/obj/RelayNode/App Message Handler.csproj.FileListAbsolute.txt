@@ -64,6 +64,7 @@ C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\le\AppMsgHandler.pdbx
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\AppMsgHandler.dll
 C:\Users\roy17\Documents\eMote-Manager\Apps\Managed Virtual Fence\Current\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\AppMsgHandler.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\App Message Handler.csprojResolveAssemblyReference.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\RelayNode\le\AppMsgHandler.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\RelayNode\be\AppMsgHandler.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\RelayNode\le\AppMsgHandler.pdb
@@ -115,11 +116,10 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\RelayNode\Samraksh_eMote_DotNow.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\RelayNode\Samraksh_eMote_Net.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\RelayNode\Samraksh_eMote_Net.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\App Message Handler.csprojResolveAssemblyReference.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\be\AppMsgHandler.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\be\AppMsgHandler.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\le\AppMsgHandler.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\le\AppMsgHandler.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\AppMsgHandler.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\AppMsgHandler.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\RelayNode\TinyCLR_DebugReferences.cache

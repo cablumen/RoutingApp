@@ -20,10 +20,12 @@
 // Base Node
 #elif RELAY_NODE
 // Relay Node
+#elif CLIENT_NODE
+// Client Node
 #elif FAKE_FENCE
 #error Fake Fence not supported
 #else
-#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, FAKE_FENCE
+#error Invalid node type. Valid options: BASE_STATION, RELAY_NODE, CLIENT_NODE, FAKE_FENCE
 #endif
 
 using System;
@@ -35,7 +37,7 @@ using Samraksh.eMote.Net.MAC;
 using Samraksh.VirtualFence;
 using Samraksh.VirtualFence.Components;
 
-#if RELAY_NODE || BASE_STATION
+#if RELAY_NODE || BASE_STATION || CLIENT_NODE
 using System.Threading;
 #endif
 
@@ -46,7 +48,7 @@ namespace Samraksh.Manager.NetManager
     /// </summary>
     public static class NetManager
     {
-#if RELAY_NODE || BASE_STATION
+#if RELAY_NODE || BASE_STATION || CLIENT_NODE
         // ReSharper disable once NotAccessedField.Local
         private static Timer _heartbeatTimer;
         private static int _numBeat;
@@ -74,7 +76,7 @@ namespace Samraksh.Manager.NetManager
             //_netManagerPipe = new SimpleCSMAStreamChannel(macBase, (byte)AppGlobal.MacPipeIds.NetworkManager);
             _netManagerPipe = new MACPipe(macBase, SystemGlobal.MacPipeIds.NetworkManager);
             _netManagerPipe.OnReceive += NetManagerStreamReceive;
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             _netManagerPipe.OnSendStatus += OnSendStatus;
 #endif
 
@@ -82,7 +84,7 @@ namespace Samraksh.Manager.NetManager
             Debug.Print("***** subscribing to Net Manager on " + SystemGlobal.MacPipeIds.NetworkManager);
 #endif
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
 #if FastHeartbeat
             _heartbeatTimer = new Timer(Send_Heartbeat, null, 0, 60 * 1000);
 #else
@@ -264,7 +266,7 @@ namespace Samraksh.Manager.NetManager
                     Debug.Print("");
 #endif
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
                     // If we're the originator of the message, or if (TTL-1) is 0, do not pass it on.
                     if (originator == _netManagerPipe.MACRadioObj.RadioAddress || --TTL == 0)
                     {
@@ -362,12 +364,12 @@ namespace Samraksh.Manager.NetManager
             }
         }
 
-#if RELAY_NODE || BASE_STATION
+#if RELAY_NODE || CLIENT_NODE || BASE_STATION
         private static void Send_Heartbeat(object state)
         {
             _numBeat++;
 
-#if RELAY_NODE
+#if RELAY_NODE || CLIENT_NODE
             var size = NetManagerGlobal.MoteMessages.Compose.Heartbeat(NetManagerGlobal.MsgBytes, _netManagerPipe.MACRadioObj.RadioAddress, (ushort)_numBeat, SystemGlobal.NodeType, RoutingGlobal.Parent, RoutingGlobal.Infinity);
 
             // If in a reset, do not forward TODO: Change this to "spray"
