@@ -59,6 +59,7 @@ namespace Samraksh.Manager.NetManager
         // Added by Dhrubo for retransmission actions
         //private static Object thisLock = new Object();
         private static ArrayList _retriedPackets = new ArrayList(); // assumed number of retries=1
+        private static Hashtable _route_table = new Hashtable();
 
         /// <summary>
         /// Initialize net manager
@@ -74,6 +75,7 @@ namespace Samraksh.Manager.NetManager
             //_netManagerPipe = new SimpleCSMAStreamChannel(macBase, (byte)AppGlobal.MacPipeIds.NetworkManager);
             _netManagerPipe = new MACPipe(macBase, SystemGlobal.MacPipeIds.NetworkManager);
             _netManagerPipe.OnReceive += NetManagerStreamReceive;
+            
 #if RELAY_NODE
             _netManagerPipe.OnSendStatus += OnSendStatus;
 #endif
@@ -98,7 +100,16 @@ namespace Samraksh.Manager.NetManager
 #endif
 #endif
         }
-
+        //Queries the current routing table to get the neighbour mac for a particular destination.
+        public static ushort childPathInfo(ushort MacId)
+        {
+            if (_route_table.Contains(MacId))
+            {
+                return (ushort)_route_table[MacId];
+            }
+            else
+                return (ushort)999;
+        }
         private static void OnSendStatus(IMAC macInstance, DateTime time, SendPacketStatus ACKStatus, uint transmitDestination, ushort index)
         {
             var pipe = macInstance as MACPipe;
@@ -259,7 +270,14 @@ namespace Samraksh.Manager.NetManager
                     // NetManagerGlobal.MoteMessages.Parse.HeartBeat(rcvPayloadBytes, out originator, out numBeat, out nodeType, out parent, out bestetx, out neighbors, out nbrStatus, out numSamplesRec, out numSyncSent, out avgRSSI, out ewrnp);
                     // NetManagerGlobal.MoteMessages.Parse.HeartBeat(rcvPayloadBytes, out originator, out numBeat, out nodeType, out parent, out bestetx, out num_nbrs, out neighbors, out nbrStatus, out numSamplesRec, out numSyncSent, out avgRSSI, out ewrnp, out isAvailableForUpperLayers, out TTL);
                     Debug.Print("\t>>> Heartbeat #" + numBeat + " from neighbor " + packet.Src + " by " + originator + " with TTL " + TTL);
+                    
+                    //Iincase of a heartbeat message, mantain a macbase level routing table. Common for both Base and Relay nodes. Will be used to query neightbour info for a particular destination.
+                    if (_route_table.Contains(originator))
+                        _route_table.Remove(originator);
+                    _route_table.Add(originator, packet.Src);
+
 #if DBG_DIAGNOSTIC
+                    
                     Debug.Print("Parent: " + parent);
                     Debug.Print("");
 #endif
