@@ -17,7 +17,7 @@
             <param name="macBase"></param>
             <param name="lcd"></param>
         </member>
-        <member name="M:Samraksh.VirtualFence.Components.AppMsgHandler.Initialize(Samraksh.eMote.Net.MACBase,Samraksh.Components.Utility.EnhancedEmoteLCD,Samraksh.Components.Utility.SerialComm)">
+        <member name="M:Samraksh.VirtualFence.Components.AppMsgHandler.Initialize(Samraksh.eMote.Net.MACBase,Samraksh.Components.Utility.EnhancedEmoteLCD,Samraksh.Components.Utility.SerialComm,System.Int32)">
             <summary>
             Initialize for base station (include serial)
             </summary>

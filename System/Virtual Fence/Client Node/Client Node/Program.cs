@@ -31,8 +31,7 @@ namespace Samraksh.VirtualFence
     /// </summary>
     public partial class Program
     {
-        private static int SendPacketInterval = 5 * 1000;
-        private static ushort _sendMsgNum;
+        private static int SendPacketInterval = 10 * 1000;
         private static readonly EnhancedEmoteLCD _lcd = new EnhancedEmoteLCD();
 
         /// <summary>
@@ -63,23 +62,6 @@ namespace Samraksh.VirtualFence
                 // Set up serial & pass it on to the components that need it
                 var serialComm = new SerialComm("COM1");
                 serialComm.Open();
-
-                /*
-                // send a packet every 5 seconds
-                var sendPacketTimer = new SimplePeriodicTimer(callBackValue =>
-                {
-                    ushort originator = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
-                    AppGlobal.ClassificationType classificationType = 'S';
-                    ushort sndNumber = _sendMsgNum;
-                    byte TTL = Byte.MaxValue;
-                    ushort pathLength = 1;
-                    ushort[] path = {originator};
-                    var size = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sndNumber, TTL, pathLength, path);
-                    _sendMsgNum++;
-
-                }, null, 0, SendPacketInterval);
-                sendPacketTimer.Start();
-                */
 
                 if (macBase is OMAC)
                 {
@@ -114,7 +96,7 @@ namespace Samraksh.VirtualFence
                 Thread.Sleep(additionalSleep * 1000);
 
                 // Initialize application message handler
-                AppMsgHandler.Initialize(macBase, _lcd, serialComm);
+                AppMsgHandler.Initialize(macBase, _lcd, serialComm, SendPacketInterval);
 
                 // Initialize the Net Manager
                 NetManager.Initialize(macBase);

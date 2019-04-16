@@ -140,7 +140,7 @@ namespace Samraksh.VirtualFence.Components
 
 					return idx;
 				}
-                public static int SendPacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int TCPNumber, byte TTL, int pathLength, ushort[] path)
+                public static int SendPacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int sndNumber, byte TTL, int pathLength, ushort[] path)
                 {
                     var idx = 0;
 
@@ -153,7 +153,7 @@ namespace Samraksh.VirtualFence.Components
                     idx++;
 
                     // Detection message number
-                    var TCPNum = (ushort)Math.Min(TCPNumber, ushort.MaxValue);
+                    var TCPNum = (ushort)Math.Min(sndNumber, ushort.MaxValue);
                     BitConverter.InsertValueIntoArray(msgBytes, idx, TCPNum);
                     idx += sizeof(ushort);
 

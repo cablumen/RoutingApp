@@ -41,7 +41,6 @@ namespace Samraksh.VirtualFence
         /// <exception cref="IOException"></exception>
         public static void Main()
         {
-            Debug.EnableGCMessages(false);
             var radarInt = new RadarInterface();
             radarInt.TurnOff();
 

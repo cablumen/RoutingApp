@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Samraksh.VirtualFence.BaseNode</FeatureName>
+    <Guid>{0650df1e-314e-436a-aeef-b8a605712ba5}</Guid>
+    <Description>&lt;Add Feature Description Here&gt;</Description>
+    <Groups />
+    <SAMRAKSH_VIRTUALFENCE_BASENODE_FEATUREPROJ>True</SAMRAKSH_VIRTUALFENCE_BASENODE_FEATUREPROJ>
+  </PropertyGroup>
+  <ItemGroup>
+    <DriverLibs Include="Samraksh_VirtualFence_BaseNode.$(LIB_EXT)" />
+    <InteropFeature Include="Samraksh_VirtualFence_BaseNode" />
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\Samraksh.VirtualFence.BaseNode.pe" />
+    <RequiredProjects Include="C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Base Node\Base Node\Stubs\dotnetmf.proj" />
+  </ItemGroup>
+</Project>

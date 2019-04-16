@@ -48,7 +48,9 @@ namespace Samraksh.VirtualFence.Components
         // Added by Dhrubo for retransmission actions
         //private static Object thisLock = new Object();
         private static ArrayList _retriedPackets = new ArrayList(); // assumed number of retries=1
-
+#if CLIENT_NODE
+        private static int sendMsgNum = 0;
+#endif
         private static EnhancedEmoteLCD _lcd;
 
         //private static int _numData;
@@ -198,8 +200,57 @@ namespace Samraksh.VirtualFence.Components
             _MACID = macID;
             Initialize(macBase, lcd);
         }
+#elif CLIENT_NODE
+        private static SerialComm _serialComm;
+        /// <summary>
+        /// Initialize for base station (include serial)
+        /// </summary>
+        /// <param name="routing"></param>
+        /// <param name="macBase"></param>
+        /// <param name="lcd"></param>
+        /// <param name="serialComm"></param>
+        public static void Initialize(MACBase macBase, EnhancedEmoteLCD lcd, SerialComm serialComm, int SendPacketInterval)
+        {
+            _serialComm = serialComm;
+            Initialize(macBase, lcd);
+            sendMsgNum = 0;
+            Random rand = new Random();
+            // send a packet every 5 seconds
+            var sendPacketTimer = new SimplePeriodicTimer(callBackValue =>
+            {
+                _lcd.Write("Send");
+                int MsgSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte);
+                byte[] routedMsg = new byte[MsgSize];
+                ushort originator = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
+                AppGlobal.ClassificationType classificationType = AppGlobal.ClassificationType.Send;
+                byte TTL = Byte.MaxValue;
+                ushort pathLength = 1;
+                ushort[] path = { originator };
+                var size = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sendMsgNum, TTL, pathLength, path);
+                // add payload
+                routedMsg[routedMsg.Length - 1] = (byte)rand.Next(11); 
+                var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, size);
+                if (status != 999)
+                {
+                    RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
+#if !DBG_LOGIC
+                    Debug.Print("Updated numTriesInCurrentWindow for Parent " + RoutingGlobal.Parent + "; new value = " + RoutingGlobal.GetNumTriesInCurrentWindow_Parent());
 #endif
-#if BASE_STATION || CLIENT_NODE
+                }
+                else //Retry once
+                {
+#if !DBG_LOGIC
+                    Debug.Print("Retrying packet");
+#endif
+                    status = AppGlobal.SendToTempParent(AppGlobal.AppPipe, routedMsg, size);
+                }
+                _lcd.Write(sendMsgNum);
+                sendMsgNum++;
+
+            }, null, 0, SendPacketInterval);
+            sendPacketTimer.Start();
+        }
+#elif BASE_STATION
         private static SerialComm _serialComm;
         /// <summary>
         /// Initialize for base station (include serial)
@@ -277,7 +328,51 @@ namespace Samraksh.VirtualFence.Components
             }
             #endregion
         }
+#if BASE_STATION
 
+        public static byte GetBaseReply(byte SendPayload)
+        {
+            byte ReplyPayload = 0;
+            switch (SendPayload)
+            {
+                case (byte)1:
+                    ReplyPayload = (byte)11;
+                    break;
+                case (byte)2:
+                    ReplyPayload = (byte)12;
+                    break;
+                case (byte)3:
+                    ReplyPayload = (byte)13;
+                    break;
+                case (byte)4:
+                    ReplyPayload = (byte)14;
+                    break;
+                case (byte)5:
+                    ReplyPayload = (byte)15;
+                    break;
+                case (byte)6:
+                    ReplyPayload = (byte)16;
+                    break;
+                case (byte)7:
+                    ReplyPayload = (byte)17;
+                    break;
+                case (byte)8:
+                    ReplyPayload = (byte)18;
+                    break;
+                case (byte)9:
+                    ReplyPayload = (byte)19;
+                    break;
+                case (byte)10:
+                    ReplyPayload = (byte)20;
+                    break;
+                default:
+                    Debug.Print(SendPayload + " not in base station table");
+                    break;
+
+            }
+            return ReplyPayload;
+        }
+#endif
         /// <summary>
         /// Handle an App message
         /// </summary>
@@ -399,6 +494,8 @@ namespace Samraksh.VirtualFence.Components
                         ushort pathLength;
                         ushort sndNumber;
 
+
+                        _lcd.Write("PSnd");
                         ushort[] path = AppGlobal.MoteMessages.Parse.SendPacket(rcvPayloadBytes, out classificationType, out sndNumber, out originator, out TTL, out pathLength);
                         
                         Debug.Print("\tSend. From neighbor " + packet.Src + " # " + sndNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
@@ -431,7 +528,6 @@ namespace Samraksh.VirtualFence.Components
                         byte[] routedMsg = new byte[rcvPayloadBytes.Length + sizeof(ushort)];
                         ushort[] newPath = new ushort[new_path_length];
                         Array.Copy(path, 0, newPath, 0, pathLength);
-                        // TODO: find a way to get the MAC VALUE
                         newPath[pathLength] = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
                         if (RoutingGlobal.IsParent)
                         {
@@ -462,8 +558,11 @@ namespace Samraksh.VirtualFence.Components
                         }
                         #endregion
 #elif BASE_STATION
+                        byte sendPayload = rcvPayloadBytes[rcvPayloadBytes.Length - 1];
+                        byte replyPayload = GetBaseReply(sendPayload);
                         ushort next_neighbor = path[pathLength - 1];
                         var size = AppGlobal.MoteMessages.Compose.RecievePacket(rcvPayloadBytes, originator, classificationType, sndNumber, TTL, pathLength, path);
+                        rcvPayloadBytes[rcvPayloadBytes.Length - 1] = replyPayload;
                         try
                         {
                             var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, rcvPayloadBytes, size);
@@ -485,10 +584,10 @@ namespace Samraksh.VirtualFence.Components
                         ushort originator;
                         byte TTL;
                         ushort pathLength;
-                        ushort next_neighbor;
+                        ushort cur_node;
                         ushort rcvNumber;
-
-                        ushort[] rest_of_path = AppGlobal.MoteMessages.Parse.RecievePacket(rcvPayloadBytes, out classificationType, out rcvNumber, out originator, out TTL, out pathLength, out next_neighbor);
+                        _lcd.Write("PRcv");
+                        ushort[] rest_of_path = AppGlobal.MoteMessages.Parse.RecievePacket(rcvPayloadBytes, out classificationType, out rcvNumber, out originator, out TTL, out pathLength, out cur_node);
 
                         Debug.Print("\tRecieve. From neighbor " + packet.Src + " # " + rcvNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
 #if CLIENT_NODE
@@ -516,6 +615,7 @@ namespace Samraksh.VirtualFence.Components
                         // If parent is available, pass it on
                         ushort new_path_length = (ushort)(pathLength - 1);
                         byte[] routedMsg = new byte[rcvPayloadBytes.Length - sizeof(ushort)];
+                        ushort next_neighbor = rest_of_path[new_path_length - 1];
                         var size = AppGlobal.MoteMessages.Compose.RecievePacket(routedMsg, originator, classificationType, rcvNumber, TTL, new_path_length, rest_of_path);
                         var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, routedMsg, size);
                         if (status != 999)

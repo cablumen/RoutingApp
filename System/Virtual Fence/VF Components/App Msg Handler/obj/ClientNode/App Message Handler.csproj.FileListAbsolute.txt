@@ -53,3 +53,7 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\SystemGlobal.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\SystemGlobal.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\be\AppMsgHandler.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\be\AppMsgHandler.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\le\AppMsgHandler.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\le\AppMsgHandler.pdbx
