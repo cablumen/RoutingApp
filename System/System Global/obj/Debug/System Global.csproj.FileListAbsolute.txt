@@ -40,8 +40,6 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\De
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\Samraksh_eMote_Net.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\Samraksh_eMote_Net.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\bin\Debug\Samraksh_eMote_Net.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\System Global.csprojResolveAssemblyReference.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\be\SystemGlobal.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\be\SystemGlobal.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\System Global\obj\Debug\le\SystemGlobal.pe

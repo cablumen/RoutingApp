@@ -3,5 +3,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DeployTransport>Serial</DeployTransport>
     <DeployDevice>COM6</DeployDevice>
+    <MF_GenerateStubs>True</MF_GenerateStubs>
   </PropertyGroup>
 </Project>

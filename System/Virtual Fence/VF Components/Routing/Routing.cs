@@ -1,12 +1,12 @@
-﻿//#define FastBeacons	// comment out for normal use
+﻿#define FastBeacons	// comment out for normal use
 
 //#define DBG_VERBOSE
 #if BASE_STATION
 #define DBG_SIMPLE
 // Base Station
 #else
-//#define DBG_LOGIC
-#define DBG_SIMPLE
+#define DBG_LOGIC
+//#define DBG_SIMPLE
 // Not base station
 #endif
 
@@ -131,7 +131,7 @@ namespace Samraksh.VirtualFence.Components
 
                 Send_Beacon(0);
 #if FastBeacons
-				_beaconTimer = new Timer(Send_Beacon, null, 60 * 1000, 10 * 1000);
+				_beaconTimer = new Timer(Send_Beacon, null, 60 * 1000, 60 * 1000);
 #else
                 _beaconTimer = new Timer(Send_Beacon, null, 300 * 1000, 300 * 1000);
 #endif
@@ -288,7 +288,7 @@ namespace Samraksh.VirtualFence.Components
 
                 Send_Beacon(0);
 #if FastBeacons
-				_beaconTimer = new Timer(Send_Beacon, null, 60 * 1000, 10 * 1000);
+				_beaconTimer = new Timer(Send_Beacon, null, 60 * 1000, 30 * 1000);
 #else
                 _beaconTimer = new Timer(Send_Beacon, null, 300 * 1000, 300 * 1000);
 #endif

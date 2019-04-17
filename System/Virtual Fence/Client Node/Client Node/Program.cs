@@ -31,7 +31,7 @@ namespace Samraksh.VirtualFence
     /// </summary>
     public partial class Program
     {
-        private static int SendPacketInterval = 10 * 1000;
+        private static int SendPacketInterval = 15 * 1000;
         private static readonly EnhancedEmoteLCD _lcd = new EnhancedEmoteLCD();
 
         /// <summary>

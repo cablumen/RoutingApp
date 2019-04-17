@@ -202,6 +202,8 @@ namespace Samraksh.VirtualFence.Components
         }
 #elif CLIENT_NODE
         private static SerialComm _serialComm;
+        private static Random _rand;
+        private static int _sendMsgNum;
         /// <summary>
         /// Initialize for base station (include serial)
         /// </summary>
@@ -213,42 +215,52 @@ namespace Samraksh.VirtualFence.Components
         {
             _serialComm = serialComm;
             Initialize(macBase, lcd);
-            sendMsgNum = 0;
-            Random rand = new Random();
+            _sendMsgNum = 0;
+            _rand = new Random();
+            Timer packetTimer = new Timer(SendPacketMessage, null, 130 * 1000, SendPacketInterval);
             // send a packet every 5 seconds
+            /*
             var sendPacketTimer = new SimplePeriodicTimer(callBackValue =>
             {
-                _lcd.Write("Send");
-                int MsgSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte);
-                byte[] routedMsg = new byte[MsgSize];
-                ushort originator = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
-                AppGlobal.ClassificationType classificationType = AppGlobal.ClassificationType.Send;
-                byte TTL = Byte.MaxValue;
-                ushort pathLength = 1;
-                ushort[] path = { originator };
-                var size = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sendMsgNum, TTL, pathLength, path);
-                // add payload
-                routedMsg[routedMsg.Length - 1] = (byte)rand.Next(11); 
-                var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, size);
-                if (status != 999)
-                {
-                    RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
-#if !DBG_LOGIC
-                    Debug.Print("Updated numTriesInCurrentWindow for Parent " + RoutingGlobal.Parent + "; new value = " + RoutingGlobal.GetNumTriesInCurrentWindow_Parent());
-#endif
+                if (RoutingGlobal.IsParent) {
+                    Debug.Print("Timer Trigger");
+                    _lcd.Write("Send");
+                    int MsgSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte);
+                    byte[] routedMsg = new byte[MsgSize];
+                    ushort originator = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
+                    AppGlobal.ClassificationType classificationType = AppGlobal.ClassificationType.Send;
+                    byte TTL = Byte.MaxValue;
+                    ushort pathLength = 1;
+                    ushort[] path = { originator };
+                    var size = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sendMsgNum, TTL, pathLength, path);
+                    // add payload
+                    routedMsg[routedMsg.Length - 1] = (byte)rand.Next(11); 
+                    var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, size + 1);
+                    if (status != 999)
+                    {
+                        RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
+    #if !DBG_LOGIC
+                        Debug.Print("Updated numTriesInCurrentWindow for Parent " + RoutingGlobal.Parent + "; new value = " + RoutingGlobal.GetNumTriesInCurrentWindow_Parent());
+    #endif
+                    }
+                    else //Retry once
+                    {
+    #if !DBG_LOGIC
+                        Debug.Print("Retrying packet");
+   #endif
+                        status = AppGlobal.SendToTempParent(AppGlobal.AppPipe, routedMsg, size);
+                    }
+                    _lcd.Write(sendMsgNum);
+                    sendMsgNum++;
                 }
-                else //Retry once
+                else
                 {
-#if !DBG_LOGIC
-                    Debug.Print("Retrying packet");
-#endif
-                    status = AppGlobal.SendToTempParent(AppGlobal.AppPipe, routedMsg, size);
+                    Debug.Print("No Parent");
                 }
-                _lcd.Write(sendMsgNum);
-                sendMsgNum++;
 
-            }, null, 0, SendPacketInterval);
+            }, null, 130000, SendPacketInterval);
             sendPacketTimer.Start();
+             */
         }
 #elif BASE_STATION
         private static SerialComm _serialComm;
@@ -265,7 +277,83 @@ namespace Samraksh.VirtualFence.Components
             Initialize(macBase, lcd);
         }
 #endif
+#if CLIENT_NODE
+        public static void SendPacketMessage(Object state)
+        {
+            Debug.Print("Timer Trigger");
+            _lcd.Write("Send");
+            int MsgSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte);
+            var routedMsg = new byte[MsgSize];
+            ushort originator = AppGlobal.AppPipe.MACRadioObj.RadioAddress;
+            AppGlobal.ClassificationType classificationType = AppGlobal.ClassificationType.Send;
+            byte TTL = Byte.MaxValue;
+            ushort pathLength = 1;
+            ushort[] path = { originator };
+            var size = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sendMsgNum, TTL, pathLength, path);
+            // add payload
+            routedMsg[routedMsg.Length - 1] = (byte)_rand.Next(11); 
 
+            #region Uncomment when not using scheduler
+#if DBG_VERBOSE
+                        Debug.Print("\nAttempting send of detection message " + _detectNum + " on pipe " + AppGlobal.AppPipe.PayloadType + " with classification " +
+                                    (char)classification + ", size " + actualSize + " to parent " + RoutingGlobal.Parent);
+#elif DBG_SIMPLE
+            Debug.Print("\nSending to " + RoutingGlobal.Parent);
+#endif
+
+#if DBG_VERBOSE
+                        var msgS = new System.Text.StringBuilder();
+                        for (var i = 0; i < actualSize; i++)
+                        {
+                            msgS.Append(msgBytes[i]);
+                            msgS.Append(' ');
+                        }
+                        Debug.Print("\t" + msgS);
+#endif
+            // If in a reset, do not forward TODO: Change this to "spray"
+            if (RoutingGlobal._color == Color.Red)
+            {
+#if DBG_VERBOSE || DBG_SIMPLE
+                Debug.Print("\tIn a Reset wave... not forwarded");
+#endif
+                return;
+            }
+            // If parent is available, pass it on
+            if (RoutingGlobal.IsParent)
+            {
+                Debug.Print("routed message len: " + routedMsg.Length);
+
+
+                var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, size);
+                Debug.Print("status " + status);
+                if (status != 999)
+                {
+                    RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
+#if !DBG_LOGIC
+                    Debug.Print("Updated numTriesInCurrentWindow for Parent " + RoutingGlobal.Parent + "; new value = " + RoutingGlobal.GetNumTriesInCurrentWindow_Parent());
+#endif
+                }
+                else //Retry once
+                {
+#if !DBG_LOGIC
+                    Debug.Print("Retrying packet");
+#endif
+                    RoutingGlobal.CleanseCandidateTable(AppGlobal.AppPipe);
+                    Candidate tmpBest = CandidateTable.GetBestCandidate(false);
+                    AppGlobal.TempParent = tmpBest.GetMacID();
+                    status = AppGlobal.SendToTempParent(AppGlobal.AppPipe, routedMsg, size);
+                    if (status != 999)
+                    {
+                        tmpBest.UpdateNumTriesInCurrentWindow(1);
+#if !DBG_LOGIC
+                        Debug.Print("Updated numTriesInCurrentWindow for TempParent " + AppGlobal.TempParent + "; new value = " + tmpBest.GetNumTriesInCurrentWindow());
+#endif
+                    }
+                }
+            }
+            #endregion
+        }
+#endif
         public static void SendDetectionMessage(AppGlobal.ClassificationType classification, int detectNum)
         {
             var msgBytes = new byte[AppGlobal.DetectionMessageSize];
@@ -300,7 +388,11 @@ namespace Samraksh.VirtualFence.Components
             // If parent is available, pass it on
             if (RoutingGlobal.IsParent)
             {
+                Debug.Print("routed message len: " + msgBytes.Length);
+
+             
                 var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, msgBytes, actualSize);
+                Debug.Print("status " + status);
                 if (status != 999)
                 {
             RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
@@ -443,7 +535,11 @@ namespace Samraksh.VirtualFence.Components
                         {
                             byte[] routedMsg = new byte[rcvPayloadBytes.Length];
                             var size = AppGlobal.MoteMessages.Compose.Detection(routedMsg, originator, classificationType, detectionNumber, TTL);
+                            Debug.Print("routed message len: " + routedMsg.Length);
+
+                            Debug.Print("routedMsg: " + routedMsg.ToString());
                             var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, size);
+                            Debug.Print("status " + status);
                             if (status != 999)
                             {
                             RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);

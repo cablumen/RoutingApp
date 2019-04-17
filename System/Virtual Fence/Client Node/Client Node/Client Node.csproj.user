@@ -4,4 +4,9 @@
     <DeployTransport>Serial</DeployTransport>
     <DeployDevice>COM10</DeployDevice>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ClientNode|AnyCPU'">
+    <DeployTransport>Serial</DeployTransport>
+    <DeployDevice>COM7</DeployDevice>
+    <MF_GenerateStubs>True</MF_GenerateStubs>
+  </PropertyGroup>
 </Project>

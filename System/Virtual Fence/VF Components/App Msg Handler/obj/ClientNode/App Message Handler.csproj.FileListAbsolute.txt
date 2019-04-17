@@ -1,3 +1,5 @@
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\App Message Handler.csprojResolveAssemblyReference.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\le\AppMsgHandler.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\be\AppMsgHandler.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\le\AppMsgHandler.pdb
@@ -41,19 +43,17 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Utility.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Utility.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Utility.xml
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\SystemGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\SystemGlobal.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\RoutingGlobal.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\AppGlobal.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Samraksh_eMote_DotNow.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Samraksh_eMote_DotNow.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Samraksh_eMote_Net.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\Samraksh_eMote_Net.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\App Message Handler.csprojResolveAssemblyReference.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\AppMsgHandler.dll
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\AppMsgHandler.pdb
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\SystemGlobal.pdb
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\bin\ClientNode\SystemGlobal.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\TinyCLR_DebugReferences.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\be\AppMsgHandler.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\be\AppMsgHandler.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\le\AppMsgHandler.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\le\AppMsgHandler.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\AppMsgHandler.dll
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Msg Handler\obj\ClientNode\AppMsgHandler.pdb

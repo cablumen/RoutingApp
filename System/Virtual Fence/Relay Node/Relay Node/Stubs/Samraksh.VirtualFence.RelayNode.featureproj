@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Samraksh.VirtualFence.RelayNode</FeatureName>
+    <Guid>{6154db94-43d6-4bdf-a762-35084535add8}</Guid>
+    <Description>&lt;Add Feature Description Here&gt;</Description>
+    <Groups />
+    <SAMRAKSH_VIRTUALFENCE_RELAYNODE_FEATUREPROJ>True</SAMRAKSH_VIRTUALFENCE_RELAYNODE_FEATUREPROJ>
+  </PropertyGroup>
+  <ItemGroup>
+    <DriverLibs Include="Samraksh_VirtualFence_RelayNode.$(LIB_EXT)" />
+    <InteropFeature Include="Samraksh_VirtualFence_RelayNode" />
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\Samraksh.VirtualFence.RelayNode.pe" />
+    <RequiredProjects Include="C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Relay Node\Relay Node\Stubs\dotnetmf.proj" />
+  </ItemGroup>
+</Project>
