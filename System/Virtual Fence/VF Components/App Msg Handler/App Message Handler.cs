@@ -1,3 +1,5 @@
+#define DBG_SIMPLE
+/*
 //#define DBG_VERBOSE
 #if BASE_STATION
 #define DBG_SIMPLE
@@ -5,6 +7,7 @@
 #define DBG_SIMPLE
 //#define DBG_LOGIC
 #endif
+ */
 //#define DBG_DIAGNOSTIC
 
 // Ensure exactly one defined
@@ -447,8 +450,8 @@ namespace Samraksh.VirtualFence.Components
 			DebuggingSupport.PrintMessageReceived(macBase, "App");
 #elif DBG_SIMPLE
             Debug.Print("");
-#endif
             Debug.Print("AppPipeReceive ");
+#endif
             try
             {
 #if !DBG_LOGIC
@@ -478,8 +481,9 @@ namespace Samraksh.VirtualFence.Components
                         ushort detectionNumber;
 
                         AppGlobal.MoteMessages.Parse.Detection(rcvPayloadBytes, out classificationType, out detectionNumber, out originator, out TTL);
-
+#if DBG_SIMPLE
                         Debug.Print("\tDetect. From neighbor " + packet.Src + " # " + detectionNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
+#endif 
 #if RELAY_NODE || CLIENT_NODE
                         //	Check if originated by self or if TTL-1 = 0
                         if (originator == AppGlobal.AppPipe.MACRadioObj.RadioAddress || --TTL == 0)
@@ -566,13 +570,14 @@ namespace Samraksh.VirtualFence.Components
                         int rcvHeader = AppGlobal.MoteMessages.Length.SendPacket(pathLength, 0);
                         byte[] sendPayload = new byte[payloadLength];
                         AppGlobal.MoteMessages.getPayload.SendPacket(rcvPayloadBytes, rcvHeader, sendPayload, (int)payloadLength);
-
+#if DBG_VERBOSE
                         Debug.Print("Received Packet #" + sndNumber + " from neighbor " + packet.Src);
                         Debug.Print("   Classification: " + (char)classificationType);
                         Debug.Print("   Originator: " + originator);
                         Debug.Print("   path Length: " + pathLength);
                         Debug.Print("   payload Length: " + payloadLength + "\n");
                         //Debug.Print("Received Packet # " + sndNumber + "From neighbor " + packet.Src + " with Classification " + (char)classificationType + ", created by " + originator + " with payload " + payloadString);
+#endif
 #if CLIENT_NODE
                         Debug.Print("\tClient Recieved a send message...");
                         //_serialComm.Write(rcvPayloadBytes);
@@ -662,15 +667,18 @@ namespace Samraksh.VirtualFence.Components
 
                         int headerSize = AppGlobal.MoteMessages.Compose.RecievePacket(rcvPayloadBytes, originator, classificationType, sndNumber, TTL, pathLength, path, payloadLength);
                         AppGlobal.MoteMessages.AddPayload.RecievePacket(rcvPayloadBytes, headerSize, rcvPayload, rcvPayloadLength);
-
+#if DBG_VERBOSE
                         Debug.Print("Sending Packet #" + sndNumber + " to neighbor " + next_neighbor);
                         Debug.Print("   Classification: " + (char)classificationType);
                         Debug.Print("   Originator: " + originator);
                         Debug.Print("   path Length: " + pathLength);
                         Debug.Print("   payload Length: " + rcvPayloadLength + "\n");
+#endif
                         try
                         {
+#if DBG_VERBOSE
                             Debug.Print("Send Successful");
+#endif
                             var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, rcvPayloadBytes, rcvSize);
 
 #if DBG_VERBOSE
@@ -696,11 +704,13 @@ namespace Samraksh.VirtualFence.Components
 
                         _lcd.Write("PRcv");
                         ushort[] rest_of_path = AppGlobal.MoteMessages.Parse.RecievePacket(rcvPayloadBytes, out classificationType, out rcvNumber, out originator, out TTL, out pathLength, out cur_node, out payloadLength);
+#if DBG_VERBOSE
                         Debug.Print("Received Packet #" + rcvNumber + " from neighbor " + packet.Src);
                         Debug.Print("   Classification: " + (char)classificationType);
                         Debug.Print("   Originator: " + originator);
                         Debug.Print("   path Length: " + pathLength);
                         Debug.Print("   payload Length: " + payloadLength + "\n");
+#endif
                         //Debug.Print("\tRecieve. From neighbor " + packet.Src + " # " + rcvNumber + ". Classification " + (char)classificationType + " created by " + originator + " with TTL " + TTL);
 #if CLIENT_NODE
                         _serialComm.Write(rcvPayloadBytes);
@@ -736,11 +746,13 @@ namespace Samraksh.VirtualFence.Components
                         var headerSize = AppGlobal.MoteMessages.Compose.RecievePacket(routedMsg, originator, classificationType, rcvNumber, TTL, new_path_length, rest_of_path, payloadLength);
 
                         AppGlobal.MoteMessages.AddPayload.RecievePacket(routedMsg, headerSize, payload, payloadLength);
+#if DBG_VERBOSE
                         Debug.Print("Sending Packet # " + rcvNumber + " to neighbor " + next_neighbor);
                         Debug.Print("   Classification: " + (char)classificationType);
                         Debug.Print("   Originator: " + originator);
                         Debug.Print("   path Length: " + new_path_length);
                         Debug.Print("   payload Length: " + payloadLength + "\n");
+#endif
                         var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, routedMsg, sendSize);
                         if (status != 999)
                         {

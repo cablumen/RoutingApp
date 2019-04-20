@@ -613,9 +613,9 @@ namespace Samraksh.VirtualFence.Components
             {
                 return;
             }
-//#if !DBG_LOGIC
+#if !DBG_LOGIC
             Debug.Print("\tRSSI: " + packet.RSSI + ", from " + packet.Src);
-//#endif
+#endif
             var rcvPayloadBytes = packet.Payload;
             //var rcvPayloadBytes = new byte[packet.Size];
             //Array.Copy(rcvPayloadBytesAll, rcvPayloadBytes, packet.Size);
