@@ -520,10 +520,7 @@ namespace Samraksh.VirtualFence.Components
 #endif
                 return 999;
             }
-            Debug.Print("length: " + length);
-            Debug.Print("msgByte len: " + msgBytes.Length);
             ushort index = mac.EnqueueToSend(_parent, msgBytes, 0, (ushort)length);
-            Debug.Print("index: " + index);
             return mac.IsMsgIDValid(index) ? index : (ushort)999;
         }
 

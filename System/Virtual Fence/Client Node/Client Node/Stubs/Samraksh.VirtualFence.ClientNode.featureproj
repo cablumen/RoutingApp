@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FeatureName>Samraksh.VirtualFence.ClientNode</FeatureName>
-    <Guid>{dc17ec9e-7ac4-4c85-ac60-6f57b2f4e057}</Guid>
+    <Guid>{5fba3ec2-e47d-408a-8b0f-397b9563db79}</Guid>
     <Description>&lt;Add Feature Description Here&gt;</Description>
     <Groups />
     <SAMRAKSH_VIRTUALFENCE_CLIENTNODE_FEATUREPROJ>True</SAMRAKSH_VIRTUALFENCE_CLIENTNODE_FEATUREPROJ>

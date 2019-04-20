@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FeatureName>Samraksh.VirtualFence.RelayNode</FeatureName>
-    <Guid>{6154db94-43d6-4bdf-a762-35084535add8}</Guid>
+    <Guid>{3415e081-c6fc-4d3d-898c-59f0aad8abaa}</Guid>
     <Description>&lt;Add Feature Description Here&gt;</Description>
     <Groups />
     <SAMRAKSH_VIRTUALFENCE_RELAYNODE_FEATUREPROJ>True</SAMRAKSH_VIRTUALFENCE_RELAYNODE_FEATUREPROJ>
