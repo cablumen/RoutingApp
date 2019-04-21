@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FeatureName>Samraksh.VirtualFence.ClientNode</FeatureName>
-    <Guid>{f4f2e0fc-294d-46ad-ada8-1454f5650abd}</Guid>
+    <Guid>{55aeed23-3bdc-467a-a912-c4adf25b913a}</Guid>
     <Description>&lt;Add Feature Description Here&gt;</Description>
     <Groups />
     <SAMRAKSH_VIRTUALFENCE_CLIENTNODE_FEATUREPROJ>True</SAMRAKSH_VIRTUALFENCE_CLIENTNODE_FEATUREPROJ>
@@ -11,6 +11,6 @@
     <DriverLibs Include="Samraksh_VirtualFence_ClientNode.$(LIB_EXT)" />
     <InteropFeature Include="Samraksh_VirtualFence_ClientNode" />
     <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\Samraksh.VirtualFence.ClientNode.pe" />
-    <RequiredProjects Include="C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Virtual Fence\Client Node\Client Node\Stubs\dotnetmf.proj" />
+    <RequiredProjects Include="C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Client Node\Client Node\Stubs\dotnetmf.proj" />
   </ItemGroup>
 </Project>

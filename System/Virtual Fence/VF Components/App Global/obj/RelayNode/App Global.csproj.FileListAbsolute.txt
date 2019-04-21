@@ -135,3 +135,7 @@ C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Virtual F
 C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Virtual Fence\VF Components\App Global\obj\RelayNode\le\AppGlobal.pdbx
 C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Virtual Fence\VF Components\App Global\obj\RelayNode\AppGlobal.dll
 C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Virtual Fence\VF Components\App Global\obj\RelayNode\AppGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\RelayNode\be\AppGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\RelayNode\be\AppGlobal.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\RelayNode\le\AppGlobal.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\App Global\obj\RelayNode\le\AppGlobal.pdbx

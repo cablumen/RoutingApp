@@ -181,3 +181,7 @@ C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Manager\N
 C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\le\Samraksh.Manager.Component.NeighborInfoManager.pdbx
 C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\Samraksh.Manager.Component.NeighborInfoManager.dll
 C:\Users\shailesh-PC\Downloads\Repos_akmrak\new_Routing\Route_4\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\Samraksh.Manager.Component.NeighborInfoManager.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\be\Samraksh.Manager.Component.NeighborInfoManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\be\Samraksh.Manager.Component.NeighborInfoManager.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\le\Samraksh.Manager.Component.NeighborInfoManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\NeighborInfo Manager\obj\RelayNode\le\Samraksh.Manager.Component.NeighborInfoManager.pdbx
