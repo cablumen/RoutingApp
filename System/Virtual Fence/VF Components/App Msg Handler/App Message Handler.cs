@@ -80,7 +80,65 @@ namespace Samraksh.VirtualFence.Components
 #endif
             _lcd = lcd;
         }
+        public static void SerialCallback_client_node(byte[] readBytes)
+        {
+            /**
+            if (readBytes.Length < 1)
+            {s
+                return;
+            }
+             */
 
+            var readChars = System.Text.Encoding.UTF8.GetChars(readBytes);   // Decode the input bytes as char using UTF8
+            String tempStr = new string(readChars);
+            // If 1, note that PC wants to get switch data
+
+            if (tempStr.Length == 8 && tempStr.Substring(0, 7).Equals("fffffff"))
+            {
+
+
+                //Debug.Print("I know something you don't+ debug print from mote ");
+                //temComm.Write("helloToYouToo: from Mote \r\n");
+                //Random random = new Random();
+                //int newReturnNum = random.Next(9);
+                //String tempNewStr = "fffffff" + newReturnNum;
+                //temComm.Write(tempNewStr);
+                //_tempTimer = new Timer(temp_timer, null, 0, 1 * 10000);
+
+
+                //send readBytes to parent. 
+                return;
+            }
+        }
+        public static void SerialCallback_base_node(byte[] readBytes)
+        {
+            /**
+            if (readBytes.Length < 1)
+            {s
+                return;
+            }
+             */
+
+            var readChars = System.Text.Encoding.UTF8.GetChars(readBytes);   // Decode the input bytes as char using UTF8
+            string tempStr = new string(readChars);
+            // If 1, note that PC wants to get switch data
+
+            if (tempStr.Length == 8 && tempStr.Substring(0, 7).Equals("fffffff"))
+            {
+
+
+                //Debug.Print("I know something you don't+ debug print from mote ");
+                //temComm.Write("helloToYouToo: from Mote \r\n");
+                
+                //string tempNewStr = "fffffff" + newReturnNum;
+                //temComm.Write(tempNewStr);
+                //_tempTimer = new Timer(temp_timer, null, 0, 1 * 10000);
+
+
+                //send readBytes to orignator who send them 
+                return;
+            }
+        }
         private static void OnSendStatus(IMAC macInstance, DateTime time, SendPacketStatus ACKStatus, uint transmitDestination, ushort index)
         {
             var pipe = macInstance as MACPipe;

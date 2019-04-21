@@ -110,7 +110,12 @@ namespace Serial_On_Off_Switch_PC {
             {
                 f_n++;
             }
-            return;
+            else
+            {
+                f_n = 0;
+                return;
+            }
+            
             if (true)
             {
                 //Console.Write("decent input " + input +" with length  "+ input.Length+"\n");

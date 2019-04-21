@@ -94,7 +94,7 @@ namespace Samraksh.VirtualFence
                 macBase.OnNeighborChange += Routing.Routing_OnNeighborChange;
 
                 // Set up serial & pass it on to the components that need it
-                var serialComm = new SerialComm("COM1", SerialCallback);
+                var serialComm = new SerialComm("COM1", AppMsgHandler.SerialCallback_client_node);
                 temComm = serialComm;
                 serialComm.Open();
 
