@@ -285,6 +285,14 @@ namespace Samraksh.VirtualFence.Components
         }
 #elif BASE_STATION
         private static SerialComm _serialComm;
+        private static byte[] _rcvPayloadBytes;
+        private static ushort _originator;
+        private static AppGlobal.ClassificationType _classificationType;
+        private static ushort _packetNumber;
+        private static byte _TTL;
+        private static ushort _pathLength;
+        private static ushort[] _path;
+        private static ushort _payloadLength;
         /// <summary>
         /// Initialize for base station (include serial)
         /// </summary>
@@ -616,18 +624,15 @@ namespace Samraksh.VirtualFence.Components
                         }
                     case AppGlobal.MessageIds.Send:
                         {
-                        AppGlobal.ClassificationType classificationType;
-                        ushort originator;
-                        byte TTL;
-                        ushort pathLength;
-                        ushort sndNumber;
-                        ushort payloadLength;
 
                         _lcd.Write("PSnd");
-                        ushort[] path = AppGlobal.MoteMessages.Parse.SendPacket(rcvPayloadBytes, out classificationType, out sndNumber, out originator, out TTL, out pathLength, out payloadLength);
-                        int rcvHeader = AppGlobal.MoteMessages.Length.SendPacket(pathLength, 0);
-                        byte[] sendPayload = new byte[payloadLength];
-                        AppGlobal.MoteMessages.getPayload.SendPacket(rcvPayloadBytes, rcvHeader, sendPayload, (int)payloadLength);
+                        ushort[] _path = AppGlobal.MoteMessages.Parse.SendPacket(_rcvPayloadBytes, out _classificationType, out _packetNumber, out _originator, out _TTL, out _pathLength, out _payloadLength);
+                        int rcvHeader = AppGlobal.MoteMessages.Length.SendPacket(_pathLength, 0);
+                        byte[] sendPayload = new byte[_payloadLength];
+                        AppGlobal.MoteMessages.getPayload.SendPacket(rcvPayloadBytes, rcvHeader, sendPayload, (int)_payloadLength);
+                        var rcvString = new string(System.Text.Encoding.UTF8.GetChars(rcvPayloadBytes));
+                        _serialComm.Write(rcvString);
+
 #if DBG_VERBOSE
                         Debug.Print("Received Packet #" + sndNumber + " from neighbor " + packet.Src);
                         Debug.Print("   Classification: " + (char)classificationType);
@@ -708,6 +713,11 @@ namespace Samraksh.VirtualFence.Components
                         }
                         #endregion
 #elif BASE_STATION
+                        /*
+                        var rcvString = new string(System.Text.Encoding.UTF8.GetChars(rcvPayloadBytes));
+                        _serialComm.Write(rcvString);
+                        
+                        //wait for reply
                         int rcvSize = AppGlobal.MoteMessages.Length.SendPacket(pathLength, payloadLength);
                         classificationType = AppGlobal.ClassificationType.Recieve;
                         byte[] rcvPayload;
@@ -725,6 +735,7 @@ namespace Samraksh.VirtualFence.Components
 
                         int headerSize = AppGlobal.MoteMessages.Compose.RecievePacket(rcvPayloadBytes, originator, classificationType, sndNumber, TTL, pathLength, path, payloadLength);
                         AppGlobal.MoteMessages.AddPayload.RecievePacket(rcvPayloadBytes, headerSize, rcvPayload, rcvPayloadLength);
+                        
 #if DBG_VERBOSE
                         Debug.Print("Sending Packet #" + sndNumber + " to neighbor " + next_neighbor);
                         Debug.Print("   Classification: " + (char)classificationType);
@@ -747,6 +758,7 @@ namespace Samraksh.VirtualFence.Components
                         {
                             Debug.Print("SerialComm exception for Detection message [" + rcvSize + "]\n" + ex);
                         }
+                        */
 #endif
                         break;
                         }
