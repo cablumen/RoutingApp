@@ -15,6 +15,8 @@ struct Library_Samraksh_VirtualFence_ClientNode_Samraksh_VirtualFence_Program
 {
     static const int FIELD_STATIC__SendPacketInterval = 0;
     static const int FIELD_STATIC___lcd = 1;
+    static const int FIELD_STATIC__temComm = 2;
+    static const int FIELD_STATIC___tempTimer = 3;
 
 
     //--//
@@ -23,7 +25,7 @@ struct Library_Samraksh_VirtualFence_ClientNode_Samraksh_VirtualFence_Program
 
 struct Library_Samraksh_VirtualFence_ClientNode_Samraksh_VirtualFence_Resources
 {
-    static const int FIELD_STATIC__manager = 2;
+    static const int FIELD_STATIC__manager = 4;
 
 
     //--//

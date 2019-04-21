@@ -33,12 +33,46 @@ namespace Samraksh.VirtualFence
     {
         private static int SendPacketInterval = 15 * 1000;
         private static readonly EnhancedEmoteLCD _lcd = new EnhancedEmoteLCD();
-
+        private static SerialComm temComm;
+        private static Timer _tempTimer;
         /// <summary>
         /// The main program
         /// </summary>
         /// <exception cref="InvalidOperationException"></exception>
         /// <exception cref="IOException"></exception>
+        /// 
+        private static void SerialCallback(byte[] readBytes)
+        {
+            /**
+            if (readBytes.Length < 1)
+            {s
+                return;
+            }
+             */
+            
+            var readChars = System.Text.Encoding.UTF8.GetChars(readBytes);   // Decode the input bytes as char using UTF8
+            String tempStr = new string(readChars);
+            // If 1, note that PC wants to get switch data
+
+            if (tempStr.Length == 8 && tempStr.Substring(0, 7).Equals("fffffff"))
+            {
+
+
+                //Debug.Print("I know something you don't+ debug print from mote ");
+                //temComm.Write("helloToYouToo: from Mote \r\n");
+                Random random = new Random();
+                int newReturnNum = random.Next(9);
+                String tempNewStr = "fffffff" + newReturnNum;
+                temComm.Write(tempNewStr);
+                //_tempTimer = new Timer(temp_timer, null, 0, 1 * 10000);
+                return;
+            }
+        }
+        private static void temp_timer(object state)
+        {
+            Debug.Print("Yep I received it\n");
+
+        }
         public static void Main()
         {
             Debug.EnableGCMessages(false);
@@ -60,7 +94,8 @@ namespace Samraksh.VirtualFence
                 macBase.OnNeighborChange += Routing.Routing_OnNeighborChange;
 
                 // Set up serial & pass it on to the components that need it
-                var serialComm = new SerialComm("COM1");
+                var serialComm = new SerialComm("COM1", SerialCallback);
+                temComm = serialComm;
                 serialComm.Open();
 
                 if (macBase is OMAC)
