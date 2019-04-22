@@ -72,7 +72,7 @@ namespace Serial_On_Off_Switch_PC {
                 f_n = 0;
                 flag = 2;
                 
-                String tempString = " From mote got: " + input+" "+input.Length+"\n";
+                String tempString = " From mote got: " + input+" \n";
                 Console.WriteLine(tempString);
                 MethodInvoker m1 = () =>
                 {
@@ -88,12 +88,9 @@ namespace Serial_On_Off_Switch_PC {
                 {
                     m1();
                 }
-                int num = int.Parse(input);
-                int numToReturn=0;
-                if (mockServer.ContainsKey(input))
-                {
-                    numToReturn = (int)mockServer[num];
-                }
+                //int num = int.Parse(input);
+                //int numToReturn=0;
+                
                 int num = -1;
                 try
                 {
@@ -136,6 +133,7 @@ namespace Serial_On_Off_Switch_PC {
                 f_n = 0;
                 return;
             }
+            return;
             
             if (true)
             {
