@@ -27,6 +27,8 @@ namespace Serial_On_Off_Switch_PC {
         private int f_n=0;
         private Hashtable mockServer;
 
+        private static int flag = 1; 
+
 		/// <summary>
 		/// Initializer
 		/// </summary>
@@ -63,11 +65,14 @@ namespace Serial_On_Off_Switch_PC {
 		private void ProcessInput(string input) {
 			// We have to use a method invoker to avoid cross-thread issues
             //Console.WriteLine(f_n);
-            if (f_n == 7)
+            Console.Write(input);
+            //if (f_n == 7 && flag==1)
+            if(f_n==7)
             {
                 f_n = 0;
+                flag = 2;
                 
-                String tempString = " From mote got: " + input+"\n";
+                String tempString = " From mote got: " + input+" "+input.Length+"\n";
                 Console.WriteLine(tempString);
                 MethodInvoker m1 = () =>
                 {
@@ -83,10 +88,19 @@ namespace Serial_On_Off_Switch_PC {
                 {
                     m1();
                 }
-                int num = int.Parse(input);
-                int numToReturn=0;
-                if (mockServer.ContainsKey(input))
-                    numToReturn = (int)mockServer[num];
+                int num = -1;
+                try
+                {
+                    num = int.Parse(input);
+                }
+                catch (Exception ex)
+                {
+                    num = -1;
+                }
+                Console.WriteLine("num is " + num);
+                int numToReturn=9-num;
+                //if (mockServer.Contains(input)){
+                //    numToReturn = (int)mockServer[num];}
                 String tempStringReturn = " Sent Back " +  numToReturn + "\n";
                 Console.WriteLine(tempStringReturn);
                 MethodInvoker m2 = () =>
@@ -103,7 +117,8 @@ namespace Serial_On_Off_Switch_PC {
                 {
                     m2();
                 }
-                _serialComm.Write("fffffff" + numToReturn);
+                if(num>=0 && num<=9)
+                    _serialComm.Write("fffffff" + numToReturn);
 
             }
             else if (input.Equals("f"))
@@ -119,6 +134,7 @@ namespace Serial_On_Off_Switch_PC {
             if (true)
             {
                 //Console.Write("decent input " + input +" with length  "+ input.Length+"\n");
+                //Console.Write(input);
             }
 			MethodInvoker m = () => {
 				// Append the received data to the textbox

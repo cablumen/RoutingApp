@@ -48,12 +48,12 @@ namespace Serial_On_Off_Switch_PC {
         
 		private void ProcessInput(string input) {
 			// We have to use a method invoker to avoid cross-thread issues
-            //Console.WriteLine(f_n);
+            Console.WriteLine(f_n);
             if (f_n == 7)
             {
                 f_n = 0;
                 
-                String tempString = " From mote got: " + input+"\n";
+                String tempString = " From mote got: " + input+"  \n";
                 Console.WriteLine(tempString);
                 MethodInvoker m1 = () =>
                 {
@@ -82,7 +82,7 @@ namespace Serial_On_Off_Switch_PC {
             }
             if (true)
             {
-                //Console.Write("decent input " + input +" with length  "+ input.Length+"\n");
+                Console.Write(input);
             }
 			MethodInvoker m = () => {
 				// Append the received data to the textbox
@@ -206,7 +206,7 @@ namespace Serial_On_Off_Switch_PC {
                 {
                     m1();
                 }
-				EnableDisableMoteSwitch.Text = "Click to Disable Mote Switch";
+				EnableDisableMoteSwitch.Text = "Click to Send Random Number";
 				EnableDisableMoteSwitch.BackColor = Color.YellowGreen;
 			}
 			EnableDisableMoteSwitch.Enabled = true;
