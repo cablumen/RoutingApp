@@ -205,3 +205,4 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Client
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Client Node\Client Node\obj\ClientNode\le\Samraksh.VirtualFence.ClientNode.pe
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Client Node\Client Node\obj\ClientNode\le\Samraksh.VirtualFence.ClientNode.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Client Node\Client Node\obj\ClientNode\Samraksh.VirtualFence.ClientNode.exe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\Client Node\Client Node\obj\ClientNode\TinyCLR_DebugReferences.cache
