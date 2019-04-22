@@ -6,7 +6,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ClientNode|AnyCPU'">
     <DeployTransport>Serial</DeployTransport>
-    <DeployDevice>COM6</DeployDevice>
+    <DeployDevice>COM7</DeployDevice>
     <MF_GenerateStubs>True</MF_GenerateStubs>
   </PropertyGroup>
 </Project>

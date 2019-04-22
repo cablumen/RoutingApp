@@ -315,12 +315,12 @@ namespace Samraksh.VirtualFence.Components
                     if (pathLength > 1)
                     {
                         cur_node = BitConverter.ToUInt16(msgBytes, idx);
-                        idx += sizeof(ushort);
                     }
                     else
                     {
                         cur_node = 0;
                     }
+                    idx += sizeof(ushort);
                     payloadLength = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
                     return path_minus_self;
@@ -367,6 +367,7 @@ namespace Samraksh.VirtualFence.Components
                     for (i = 0; i < payLoadLength; i = i + 1)
                     {
                         msgBytes[idx] = payloadBytes[i];
+                        idx++;
                     }
                     return idx;
                  }
@@ -376,6 +377,7 @@ namespace Samraksh.VirtualFence.Components
                     for (i = 0; i < payLoadLength; i = i + 1)
                     {
                         msgBytes[idx] = payloadBytes[i];
+                        idx++;
                     }
                     return idx;
                  }
@@ -388,6 +390,7 @@ namespace Samraksh.VirtualFence.Components
                     for (i = 0; i < payLoadLength; i = i + 1)
                     {
                         payloadBytes[i] = msgBytes[idx];
+                        idx++;
                     }
                  }
                  public static void RecievePacket(byte[] msgBytes, int msgOffset, byte[] payloadBytes, int payLoadLength){
@@ -396,6 +399,7 @@ namespace Samraksh.VirtualFence.Components
                     for (i = 0; i < payLoadLength; i = i + 1)
                     {
                         payloadBytes[i] = msgBytes[idx];
+                        idx++;
                     }
                  }
             }

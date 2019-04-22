@@ -12,10 +12,11 @@
             It can help you debug another program by "sniffing" what's coming over the radio.
             </summary>
         </member>
-        <member name="M:Samraksh.VirtualFence.Base.Main">
+        <member name="M:Samraksh.VirtualFence.Base.SerialCallback(System.Byte[])">
             <summary>
             Set up things for the Base Node
             </summary>
+            
         </member>
     </members>
 </doc>

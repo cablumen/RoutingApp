@@ -20,12 +20,13 @@ static const CLR_RT_MethodHandler method_lookup[] =
     NULL,
     NULL,
     NULL,
+    NULL,
 };
 
 const CLR_RT_NativeAssemblyData g_CLR_AssemblyNative_Samraksh_VirtualFence_BaseNode =
 {
     "Samraksh.VirtualFence.BaseNode", 
-    0x744B6576,
+    0xCCDB9335,
     method_lookup
 };
 

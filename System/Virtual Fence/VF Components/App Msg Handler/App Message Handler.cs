@@ -1,4 +1,4 @@
-#define DBG_SIMPLE
+#define DBG_VERBOSE
 /*
 //#define DBG_VERBOSE
 #if BASE_STATION
@@ -83,18 +83,18 @@ namespace Samraksh.VirtualFence.Components
 #if CLIENT_NODE
         public static void SerialCallback_client_node(byte[] readBytes)
         {
-            /**
+            
             if (readBytes.Length < 1)
-            {s
+            {
                 return;
             }
-             */
 
             var readChars = System.Text.Encoding.UTF8.GetChars(readBytes);   // Decode the input bytes as char using UTF8
-            String tempStr = new string(readChars);
+            string tempStr = new string(readChars);
+            //Debug.Print("Client serial input: " + tempStr);
             // If 1, note that PC wants to get switch data
 
-            if (tempStr.Length == 8 && tempStr.Substring(0, 7).Equals("fffffff"))
+            if (readBytes.Length == 8 && tempStr.Substring(0, 7).Equals("fffffff"))
             {
                 // byte payloadValue = (byte)_rand.Next(11);
                 // Change both for different payload sizes
@@ -115,13 +115,18 @@ namespace Samraksh.VirtualFence.Components
                 AppGlobal.MoteMessages.AddPayload.SendPacket(routedMsg, headerSize, readBytes, payloadLength);
                 if (RoutingGlobal.IsParent)
                 {
-                    Debug.Print("routed message len: " + routedMsg.Length);
-
-
+#if DBG_VERBOSE
+                    Debug.Print("Sending Packet #" + _sendMsgNum + " to Parent");
+                    Debug.Print("   Classification: " + (char)classificationType);
+                    Debug.Print("   Originator: " + originator);
+                    Debug.Print("   path Length: " + pathLength);
+                    Debug.Print("   payload Length: " + payloadLength + "\n");
+#endif
                     var status = RoutingGlobal.SendToParent(AppGlobal.AppPipe, routedMsg, sendSize);
-                    Debug.Print("status " + status);
                     if (status != 999)
                     {
+                        Debug.Print("Send Successful");
+
                         _sendMsgNum++;
                         RoutingGlobal.UpdateNumTriesInCurrentWindow_Parent(1);
 #if !DBG_LOGIC
@@ -139,6 +144,7 @@ namespace Samraksh.VirtualFence.Components
                         status = AppGlobal.SendToTempParent(AppGlobal.AppPipe, routedMsg, sendSize);
                         if (status != 999)
                         {
+                            Debug.Print("Send Successful");
                             _sendMsgNum++;
                             tmpBest.UpdateNumTriesInCurrentWindow(1);
 #if !DBG_LOGIC
@@ -164,15 +170,14 @@ namespace Samraksh.VirtualFence.Components
 #elif BASE_STATION
         public static void SerialCallback_base_node(byte[] readBytes)
         {
-            /**
             if (readBytes.Length < 1)
-            {s
+            {
                 return;
             }
-             */
 
             var readChars = System.Text.Encoding.UTF8.GetChars(readBytes);   // Decode the input bytes as char using UTF8
             string tempStr = new string(readChars);
+            //Debug.Print("Base serial input: " + tempStr);
             // If 1, note that PC wants to get switch data
 
             if (tempStr.Length == 8 && tempStr.Substring(0, 7).Equals("fffffff"))
@@ -184,17 +189,17 @@ namespace Samraksh.VirtualFence.Components
                 AppGlobal.ClassificationType classificationType = AppGlobal.ClassificationType.Recieve;
                 byte TTL = Byte.MaxValue;
                 ushort next_neighbor = _path[_pathLength - 1];
-                var headerSize = AppGlobal.MoteMessages.Compose.SendPacket(rcvPayloadBytes, originator, classificationType, _packetNumber, _TTL, _pathLength, _path, (ushort)_payloadLength);
+                var headerSize = AppGlobal.MoteMessages.Compose.RecievePacket(rcvPayloadBytes, originator, classificationType, _packetNumber, _TTL, _pathLength, _path, (ushort)_payloadLength);
                 
                 // add payload
-                AppGlobal.MoteMessages.AddPayload.SendPacket(rcvPayloadBytes, headerSize, readBytes, _payloadLength);
+                AppGlobal.MoteMessages.AddPayload.RecievePacket(rcvPayloadBytes, headerSize, readBytes, _payloadLength);
       
 #if DBG_VERBOSE
-                Debug.Print("Sending Packet #" + sndNumber + " to neighbor " + next_neighbor);
+                Debug.Print("Sending Packet #" + _packetNumber + " to neighbor " + next_neighbor);
                 Debug.Print("   Classification: " + (char)classificationType);
                 Debug.Print("   Originator: " + originator);
-                Debug.Print("   path Length: " + pathLength);
-                Debug.Print("   payload Length: " + rcvPayloadLength + "\n");
+                Debug.Print("   path Length: " + _pathLength);
+                Debug.Print("   payload Length: " + _payloadLength + "\n");
 #endif
                 try
                 {
@@ -202,10 +207,6 @@ namespace Samraksh.VirtualFence.Components
                     Debug.Print("Send Successful");
 #endif
                     var status = RoutingGlobal.SendToNeighbor(AppGlobal.AppPipe, next_neighbor, rcvPayloadBytes, rcvSize);
-
-#if DBG_VERBOSE
-					Debug.Print("\n************ Detection sent to PC " + msg.Substring(1,msg.Length-2));
-#endif
                 }
                 catch (Exception ex)
                 {
@@ -367,7 +368,7 @@ namespace Samraksh.VirtualFence.Components
             Initialize(macBase, lcd);
             _sendMsgNum = 0;
             _rand = new Random();
-            _packetTimer = new Timer(SendPacketMessage, null, 130 * 1000, SendPacketInterval);
+            //_packetTimer = new Timer(SendPacketMessage, null, 130 * 1000, SendPacketInterval);
         }
 #elif BASE_STATION
         private static SerialComm _serialComm;
@@ -421,22 +422,8 @@ namespace Samraksh.VirtualFence.Components
             // add payload
             AppGlobal.MoteMessages.AddPayload.SendPacket(routedMsg, headerSize, payload, payloadLength);
 
-            #region Uncomment when not using scheduler
-#if DBG_VERBOSE
-                        Debug.Print("\nAttempting send of detection message " + _detectNum + " on pipe " + AppGlobal.AppPipe.PayloadType + " with classification " +
-                                    (char)classification + ", size " + actualSize + " to parent " + RoutingGlobal.Parent);
-#elif DBG_SIMPLE
+#if DBG_SIMPLE
             Debug.Print("\nSending to " + RoutingGlobal.Parent);
-#endif
-
-#if DBG_VERBOSE
-                        var msgS = new System.Text.StringBuilder();
-                        for (var i = 0; i < actualSize; i++)
-                        {
-                            msgS.Append(msgBytes[i]);
-                            msgS.Append(' ');
-                        }
-                        Debug.Print("\t" + msgS);
 #endif
             // If in a reset, do not forward TODO: Change this to "spray"
             if (RoutingGlobal._color == Color.Red)
@@ -481,7 +468,6 @@ namespace Samraksh.VirtualFence.Components
                     }
                 }
             }
-            #endregion
         }
 #endif
         public static void SendDetectionMessage(AppGlobal.ClassificationType classification, int detectNum)
@@ -492,8 +478,7 @@ namespace Samraksh.VirtualFence.Components
 
             #region Uncomment when not using scheduler
 #if DBG_VERBOSE
-                        Debug.Print("\nAttempting send of detection message " + _detectNum + " on pipe " + AppGlobal.AppPipe.PayloadType + " with classification " +
-                                    (char)classification + ", size " + actualSize + " to parent " + RoutingGlobal.Parent);
+                        //Debug.Print("\nAttempting send of detection message " + detectNum + " on pipe " + AppGlobal.AppPipe.PayloadType + " with classification " + (char)classification + ", size " + actualSize + " to parent " + RoutingGlobal.Parent);
 #elif DBG_SIMPLE
             Debug.Print("\nSending to " + RoutingGlobal.Parent);
 #endif
@@ -763,7 +748,6 @@ namespace Samraksh.VirtualFence.Components
                         // If parent is available, pass it on
                         ushort new_path_length = (ushort)(pathLength + 1);
                         int payloadSize = sizeof(byte) * payloadLength;
-                        byte[] payload = new byte[payloadLength];
                         // remove ushort in length because popping first in path
                         int rcvSize = AppGlobal.MoteMessages.Length.RecievePacket(new_path_length, payloadSize);
 
@@ -774,7 +758,7 @@ namespace Samraksh.VirtualFence.Components
                         if (RoutingGlobal.IsParent)
                         {
                             var headerSize = AppGlobal.MoteMessages.Compose.SendPacket(routedMsg, originator, classificationType, sndNumber, TTL, new_path_length, newPath, payloadLength);
-                            AppGlobal.MoteMessages.AddPayload.RecievePacket(routedMsg, headerSize, payload, payloadLength);
+                            AppGlobal.MoteMessages.AddPayload.RecievePacket(routedMsg, headerSize, sendPayload, payloadLength);
                             Debug.Print("Sending Packet # " + sndNumber + " to neighbor " + RoutingGlobal.Parent);
                             Debug.Print("   Classification: " + (char)classificationType);
                             Debug.Print("   Originator: " + originator);
@@ -815,12 +799,12 @@ namespace Samraksh.VirtualFence.Components
                         _pathLength = pathLength;
                         _path = path;
                         _payloadLength = payloadLength;
-
-                        var rcvString = new string(System.Text.Encoding.UTF8.GetChars(sendPayload));
-                        _serialComm.Write(rcvString);
+                        //Debug.Print("Base serial output: " + rcvString);
+                        _serialComm.Write(sendPayload);
  
                         /*
                         var rcvString = new string(System.Text.Encoding.UTF8.GetChars(rcvPayloadBytes));
+                        Debug.Print("Base serial output: " + rcvString);
                         _serialComm.Write(rcvString);
                         
                         //wait for reply
@@ -892,8 +876,10 @@ namespace Samraksh.VirtualFence.Components
                         int rcvHeader = AppGlobal.MoteMessages.Length.RecievePacket(pathLength, 0);
                         byte[] rcvPayload = new byte[payloadLength];
                         AppGlobal.MoteMessages.getPayload.RecievePacket(rcvPayloadBytes, rcvHeader, rcvPayload, (int)payloadLength);
-                        var rcvString = new string(System.Text.Encoding.UTF8.GetChars(rcvPayload));
-                        _serialComm.Write(rcvString);
+                        
+                        //var rcvString = new string(System.Text.Encoding.UTF8.GetChars(rcvPayload));
+                        //Debug.Print("Client serial output: " + rcvString);
+                        _serialComm.Write(rcvPayloadBytes);
 
 #elif RELAY_NODE
                         //	Check if originated by self or if TTL-1 = 0
@@ -917,7 +903,9 @@ namespace Samraksh.VirtualFence.Components
                         // Not originated by self. 
                         // If parent is available, pass it on
                         ushort new_path_length = (ushort)(pathLength - 1);
-                        byte[] payload = new byte[payloadLength];
+                        int rcvHeader = AppGlobal.MoteMessages.Length.RecievePacket(pathLength, 0);
+                        byte[] rcvPayload = new byte[payloadLength];
+                        AppGlobal.MoteMessages.getPayload.SendPacket(rcvPayloadBytes, rcvHeader, rcvPayload, (int)payloadLength);
 
                         ushort next_neighbor = rest_of_path[new_path_length - 1];
 
@@ -926,7 +914,7 @@ namespace Samraksh.VirtualFence.Components
 
                         var headerSize = AppGlobal.MoteMessages.Compose.RecievePacket(routedMsg, originator, classificationType, rcvNumber, TTL, new_path_length, rest_of_path, payloadLength);
 
-                        AppGlobal.MoteMessages.AddPayload.RecievePacket(routedMsg, headerSize, payload, payloadLength);
+                        AppGlobal.MoteMessages.AddPayload.RecievePacket(routedMsg, headerSize, rcvPayload, payloadLength);
 #if DBG_VERBOSE
                         Debug.Print("Sending Packet # " + rcvNumber + " to neighbor " + next_neighbor);
                         Debug.Print("   Classification: " + (char)classificationType);

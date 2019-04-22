@@ -78,11 +78,12 @@ namespace Serial_On_Off_Switch_PC {
             else
             {
                 f_n = 0;
-                return;
+                //return;
             }
             if (true)
             {
                 //Console.Write("decent input " + input +" with length  "+ input.Length+"\n");
+                Console.Write("input: " + input);
             }
 			MethodInvoker m = () => {
 				// Append the received data to the textbox
@@ -168,12 +169,12 @@ namespace Serial_On_Off_Switch_PC {
 			if (_moteSwitchEnabled) {
 				_moteSwitchEnabled = false;
 				_serialComm.Write("fffffff"+numToSend);
-                Console.WriteLine("Sent to mote: "+ numToSend);
+                Console.WriteLine("Sent to mote: "+ numToSend + "\n");
                 MethodInvoker m1 = () =>
                 {
                     // Append the received data to the textbox
 
-                    FromMote.AppendText("Sent to mote: " + numToSend);
+                    FromMote.AppendText("Sent to mote: " + numToSend + "\n");
                 };
                 if (FromMote.InvokeRequired)
                 {
@@ -191,7 +192,7 @@ namespace Serial_On_Off_Switch_PC {
 			else {
 				_moteSwitchEnabled = true;
                 _serialComm.Write("fffffff" + numToSend);
-                Console.WriteLine("Sent to mote: " + numToSend);
+                Console.WriteLine("Sent to mote: " + numToSend + "\n");
                 MethodInvoker m1 = () =>
                 {
                     // Append the received data to the textbox

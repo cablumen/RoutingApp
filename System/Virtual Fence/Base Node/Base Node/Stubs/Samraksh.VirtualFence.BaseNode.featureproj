@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FeatureName>Samraksh.VirtualFence.BaseNode</FeatureName>
-    <Guid>{b6bfaf06-518c-4c0c-a497-3660156528be}</Guid>
+    <Guid>{46cc6398-f175-4ce0-a037-996d9778137f}</Guid>
     <Description>&lt;Add Feature Description Here&gt;</Description>
     <Groups />
     <SAMRAKSH_VIRTUALFENCE_BASENODE_FEATUREPROJ>True</SAMRAKSH_VIRTUALFENCE_BASENODE_FEATUREPROJ>

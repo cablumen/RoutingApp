@@ -86,7 +86,9 @@ namespace Serial_On_Off_Switch_PC {
                 int num = int.Parse(input);
                 int numToReturn=0;
                 if (mockServer.ContainsKey(input))
+                {
                     numToReturn = (int)mockServer[num];
+                }
                 String tempStringReturn = " Sent Back " +  numToReturn + "\n";
                 Console.WriteLine(tempStringReturn);
                 MethodInvoker m2 = () =>
