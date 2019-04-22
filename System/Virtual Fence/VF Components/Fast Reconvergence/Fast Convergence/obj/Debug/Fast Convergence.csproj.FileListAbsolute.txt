@@ -167,9 +167,5 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Fast Convergence.csproj.GenerateResource.Cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\Samraksh.VirtualFence.Components.Resources.tinyresources
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\TinyResGen.cache
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\be\FastConvergence.pe
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\be\FastConvergence.pdbx
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\le\FastConvergence.pe
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\le\FastConvergence.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.pdb

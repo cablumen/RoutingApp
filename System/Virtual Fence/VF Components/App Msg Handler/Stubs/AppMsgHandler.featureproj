@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FeatureName>AppMsgHandler</FeatureName>
-    <Guid>{52d08d56-f1b4-4a5b-a786-a086aaf9aea8}</Guid>
+    <Guid>{64a6538f-2f32-4764-8122-4d2105c20c2c}</Guid>
     <Description>&lt;Add Feature Description Here&gt;</Description>
     <Groups />
     <APPMSGHANDLER_FEATUREPROJ>True</APPMSGHANDLER_FEATUREPROJ>

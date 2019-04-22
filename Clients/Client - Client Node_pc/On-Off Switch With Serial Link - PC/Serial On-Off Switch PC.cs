@@ -45,15 +45,16 @@ namespace Serial_On_Off_Switch_PC {
 		/// </summary>
 		/// <param name="input">The data received</param>
         /// 
-        
-		private void ProcessInput(string input) {
-			// We have to use a method invoker to avoid cross-thread issues
-            Console.WriteLine(f_n);
+
+        private void ProcessInput(string input)
+        {
+            // We have to use a method invoker to avoid cross-thread issues
+            //Console.WriteLine(f_n);
             if (f_n == 7)
             {
                 f_n = 0;
-                
-                String tempString = " From mote got: " + input+"  \n";
+
+                String tempString = "From mote got: " + input + "  \n";
                 Console.WriteLine(tempString);
                 MethodInvoker m1 = () =>
                 {
@@ -70,35 +71,42 @@ namespace Serial_On_Off_Switch_PC {
                     m1();
                 }
 
+
             }
             else if (input.Equals("f"))
             {
                 f_n++;
+
             }
             else
             {
                 f_n = 0;
-                //return;
+
             }
             if (true)
             {
                 //Console.Write("decent input " + input +" with length  "+ input.Length+"\n");
-                Console.Write("input: " + input);
+                Console.Write(input);
             }
-			MethodInvoker m = () => {
-				// Append the received data to the textbox
-                
-				FromMote.AppendText(input);
-			};
+            return;
+            MethodInvoker m = () =>
+            {
+                // Append the received data to the textbox
+
+                FromMote.AppendText(input);
+            };
             //if (input.Length < 2)
             //    return;
-			if (FromMote.InvokeRequired) {
-				FromMote.Invoke(m);
-			}
-			else {
-				m();
-			}
-		}
+            if (FromMote.InvokeRequired)
+            {
+                FromMote.Invoke(m);
+            }
+            else
+            {
+                m();
+            }
+        }
+		
        
         
 
