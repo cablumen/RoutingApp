@@ -163,3 +163,4 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net 
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\le\Samraksh.Manager.Component.NetManagerGlobal.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\Samraksh.Manager.Component.NetManagerGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\Samraksh.Manager.Component.NetManagerGlobal.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager Global\obj\Debug\TinyCLR_DebugReferences.cache

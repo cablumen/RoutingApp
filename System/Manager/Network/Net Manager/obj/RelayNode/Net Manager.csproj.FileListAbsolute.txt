@@ -181,3 +181,7 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net 
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\Samraksh.Manager.Component.NetManager.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\Samraksh.Manager.Component.NetManager.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\TinyCLR_DebugReferences.cache
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\be\Samraksh.Manager.Component.NetManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\be\Samraksh.Manager.Component.NetManager.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\le\Samraksh.Manager.Component.NetManager.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Manager\Network\Net Manager\obj\RelayNode\le\Samraksh.Manager.Component.NetManager.pdbx

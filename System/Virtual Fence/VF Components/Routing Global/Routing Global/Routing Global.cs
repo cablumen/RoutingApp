@@ -12,10 +12,11 @@
 
 using System;
 using System.Threading;
+using System.Collections;
+
 using Microsoft.SPOT;
 using Samraksh.eMote.Net;
 using Samraksh.eMote.Net.MAC;
-//using Samraksh.Manager.LocalManager;
 using BitConverter = Samraksh.Components.Utility.BitConverter;
 using Math = System.Math;
 
@@ -310,6 +311,8 @@ namespace Samraksh.VirtualFence.Components
         private static byte path_ewrnp_Parent;
         public static byte path_ewrnp;
 
+        private static Hashtable _route_table = new Hashtable();
+
         private static Object thisLock = new Object(); // Every candidate has its own lock
 
         public static void UpdatePathEWRNP_Parent(byte pathEWRNP_B2P)
@@ -524,15 +527,9 @@ namespace Samraksh.VirtualFence.Components
             return mac.IsMsgIDValid(index) ? index : (ushort)999;
         }
 
-        public static ushort SendToNeighbor(MACPipe mac, ushort next_neighbor, byte[] msgBytes, int length)
+        public static ushort SendToChild(MACPipe mac, ushort destination, byte[] msgBytes, int length)
         {
-            ushort[] _neighborList = MACBase.NeighborListArray();
-            mac.NeighborList(_neighborList); // Get current neighborlist
-            if (Array.IndexOf(_neighborList, next_neighbor) == -1)
-            {
-                Debug.Print(next_neighbor + " not in neighbor list");
-                return 0;
-            }
+            ushort next_neighbor = RoutingGlobal.GetChild(destination);
             // If in a reset, do not forward
             if (RoutingGlobal._color == Color.Red)
             {
@@ -565,6 +562,21 @@ namespace Samraksh.VirtualFence.Components
             }
         }
 
+        public static void AddChild(ushort originator, ushort _neighbor)
+        {
+            if (_route_table.Contains(originator))
+                _route_table.Remove(originator);
+            _route_table.Add(originator, _neighbor);
+        }
+        //Queries the current routing table to get the neighbour mac for a particular destination.
+        public static ushort GetChild(ushort MacId){
+            if (_route_table.Contains(MacId))
+            {
+                return (ushort)_route_table[MacId];
+            }
+            else
+                return (ushort)999;
+        }
         public static void SetParent(bool refresh)
         {
             // Add current parent as ex parent

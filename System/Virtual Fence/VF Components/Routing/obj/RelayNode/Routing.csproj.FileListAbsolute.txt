@@ -181,3 +181,4 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing\obj\RelayNode\le\Samraksh.VirtualFence.Component.Routing.pdbx
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing\obj\RelayNode\Samraksh.VirtualFence.Component.Routing.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing\obj\RelayNode\Samraksh.VirtualFence.Component.Routing.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing\obj\RelayNode\TinyCLR_DebugReferences.cache

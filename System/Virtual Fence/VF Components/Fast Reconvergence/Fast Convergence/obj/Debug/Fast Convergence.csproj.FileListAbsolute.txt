@@ -154,8 +154,6 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Samraksh_eMote_DotNow.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Utility.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Utility.xml
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\SystemGlobal.pdb
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\SystemGlobal.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\RoutingGlobal.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Samraksh_eMote_Net.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\bin\Debug\Samraksh_eMote_Net.xml
@@ -169,3 +167,7 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\TinyResGen.cache
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\FastConvergence.pdb
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\be\FastConvergence.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\be\FastConvergence.pdbx
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\le\FastConvergence.pe
+C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Fast Reconvergence\Fast Convergence\obj\Debug\le\FastConvergence.pdbx

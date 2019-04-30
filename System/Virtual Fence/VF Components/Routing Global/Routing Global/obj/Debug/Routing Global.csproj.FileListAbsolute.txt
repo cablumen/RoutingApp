@@ -135,8 +135,6 @@ C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Com
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\SystemGlobal.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Utility.dll
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Samraksh_eMote_DotNow.dll
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\SystemGlobal.pdb
-C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\SystemGlobal.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Samraksh_eMote_Net.pdb
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Samraksh_eMote_Net.xml
 C:\Users\Cameron Blumenthal\Desktop\eMote\RoutingApp\System\Virtual Fence\VF Components\Routing Global\Routing Global\bin\Debug\Utility.pdb

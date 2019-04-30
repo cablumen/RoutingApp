@@ -95,10 +95,11 @@
             <param name="detectionNum"></param>
             <param name="originator"></param>
         </member>
-        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages.Length">
-            <summary>
-            Compose App messages
-            </summary>
+        <member name="T:Samraksh.VirtualFence.Components.AppGlobal.MoteMessages.AddPayload">
+             <summary>
+             Compose App messages
+             </summary>
+            
         </member>
         <member name="T:Samraksh.VirtualFence.Components.AppGlobal.PCMessages">
             <summary>

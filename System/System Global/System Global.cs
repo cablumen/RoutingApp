@@ -262,7 +262,7 @@ namespace Samraksh.VirtualFence
 			public const byte CCASenseTime = 140;
 
 			/// <summary>Transmit power level</summary>
-            public const RF231TxPower Power = RF231TxPower.Power_Minus17dBm;
+            public const RF231TxPower Power = RF231TxPower.Power_2Point3dBm;
 
 			/// <summary>Radio channel</summary>
 			public const RF231Channel RadioChannel = RF231Channel.Channel_13;

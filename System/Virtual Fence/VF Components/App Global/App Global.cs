@@ -33,6 +33,8 @@ namespace Samraksh.VirtualFence.Components
         /// Size of detection message
         /// </summary>
         public const int DetectionMessageSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte); // Additional field for TTL
+        public const int SendMessageSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(byte) + sizeof(ushort); // Additional field for TTL
+        public const int RecieveMessageSize = sizeof(byte) + sizeof(byte) + sizeof(ushort) + sizeof(ushort) + sizeof(ushort) + sizeof(byte) + sizeof(ushort); // Additional field for TTL
         public static ushort TempParent;
 
 #if !PC
@@ -140,7 +142,7 @@ namespace Samraksh.VirtualFence.Components
 
 					return idx;
 				}
-                public static int SendPacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int sndNumber, byte TTL, int pathLength, ushort[] path, ushort payloadLength)
+                public static int SendPacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int sndNumber, byte TTL, /*int pathLength, ushort[] path, */ushort payloadLength)
                 {
                     var idx = 0;
 
@@ -153,8 +155,8 @@ namespace Samraksh.VirtualFence.Components
                     idx++;
 
                     // Detection message number
-                    var TCPNum = (ushort)Math.Min(sndNumber, ushort.MaxValue);
-                    BitConverter.InsertValueIntoArray(msgBytes, idx, TCPNum);
+                    var sndNum = (ushort)Math.Min(sndNumber, ushort.MaxValue);
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, sndNum);
                     idx += sizeof(ushort);
 
                     // Message originator
@@ -164,7 +166,7 @@ namespace Samraksh.VirtualFence.Components
                     // TTL
                     msgBytes[idx] = (byte)TTL;
                     idx++;
-
+                    /*
                     // Path Length
                     BitConverter.InsertValueIntoArray(msgBytes, idx, pathLength);
                     idx += sizeof(ushort);
@@ -177,12 +179,13 @@ namespace Samraksh.VirtualFence.Components
                         BitConverter.InsertValueIntoArray(msgBytes, idx, path[i]);
                         idx += sizeof(ushort);
                     }
+                     */
                     // Payload Length
                     BitConverter.InsertValueIntoArray(msgBytes, idx, payloadLength);
                     idx += sizeof(ushort);
                     return idx;
                 }
-                public static int RecievePacket(byte[] msgBytes, ushort originator, ClassificationType classificatonType, int rcvNumber, byte TTL, ushort pathLength, ushort[] path, ushort payloadLength)
+                public static int RecievePacket(byte[] msgBytes, ushort originator, ushort destination, ClassificationType classificatonType, int rcvNumber, byte TTL, /*ushort pathLength, ushort[] path,*/ ushort payloadLength)
                 {
                     var idx = 0;
 
@@ -203,10 +206,14 @@ namespace Samraksh.VirtualFence.Components
                     BitConverter.InsertValueIntoArray(msgBytes, idx, originator);
                     idx += sizeof(ushort);
 
+                    // Message destination
+                    BitConverter.InsertValueIntoArray(msgBytes, idx, destination);
+                    idx += sizeof(ushort);
+
                     // TTL
                     msgBytes[idx] = (byte)TTL;
                     idx++;
-
+                    /*
                     // Path Length
                     BitConverter.InsertValueIntoArray(msgBytes, idx, pathLength);
                     idx += sizeof(ushort);
@@ -219,6 +226,7 @@ namespace Samraksh.VirtualFence.Components
                         BitConverter.InsertValueIntoArray(msgBytes, idx, path[i]);
                         idx += sizeof(ushort);
                     }
+                     */
                     // Payload Length
                     BitConverter.InsertValueIntoArray(msgBytes, idx, payloadLength);
                     idx += sizeof(ushort);
@@ -255,8 +263,8 @@ namespace Samraksh.VirtualFence.Components
                     TTL = msgBytes[idx];
                     idx += 1;
 				}
-                public static ushort[] SendPacket(byte[] msgBytes, out ClassificationType classificationType, 
-                    out ushort TCPNumber, out ushort originator, out byte TTL, out ushort pathLength, out ushort payloadLength)
+                public static void SendPacket(byte[] msgBytes, out ClassificationType classificationType, 
+                    out ushort TCPNumber, out ushort originator, out byte TTL, /*out ushort pathLength,*/ out ushort payloadLength)
                 {
                     var idx = 1; // Start at 1 since we've already checked the message ID
 
@@ -271,7 +279,7 @@ namespace Samraksh.VirtualFence.Components
 
                     TTL = msgBytes[idx];
                     idx += 1;
-                    
+                    /*
                     pathLength = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
 
@@ -281,27 +289,31 @@ namespace Samraksh.VirtualFence.Components
                         path[i] = BitConverter.ToUInt16(msgBytes, idx);
                         idx += sizeof(ushort);
                     }
+                     */
                     payloadLength = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
-                    return path;
+                    //return path;
                 }
-                public static ushort[] RecievePacket(byte[] msgBytes, out ClassificationType classificationType,
-                    out ushort UDPNumber, out ushort originator, out byte TTL, out ushort pathLength, out ushort cur_node, out ushort payloadLength)
+                public static void RecievePacket(byte[] msgBytes, out ClassificationType classificationType,
+                    out ushort sndNumber, out ushort originator, out ushort destination, out byte TTL, /*out ushort pathLength, out ushort cur_node,*/ out ushort payloadLength)
                 {
                     var idx = 1; // Start at 1 since we've already checked the message ID
 
                     classificationType = (ClassificationType)msgBytes[idx];
                     idx += 1;
 
-                    UDPNumber = BitConverter.ToUInt16(msgBytes, idx);
+                    sndNumber = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
 
                     originator = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
 
+                    destination = BitConverter.ToUInt16(msgBytes, idx);
+                    idx += sizeof(ushort);
+
                     TTL = msgBytes[idx];
                     idx += 1;
-
+                    /*
                     pathLength = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
 
@@ -320,15 +332,18 @@ namespace Samraksh.VirtualFence.Components
                     {
                         cur_node = 0;
                     }
+                     */
                     idx += sizeof(ushort);
                     payloadLength = BitConverter.ToUInt16(msgBytes, idx);
                     idx += sizeof(ushort);
-                    return path_minus_self;
+                    //return path_minus_self;
                 }
 			}
             			/// <summary>
 			/// Compose App messages
 			/// </summary>
+            ///
+            /*
 			public static class Length
 			{
                  public static int SendPacket(ushort pathLength, int payloadSize){
@@ -343,22 +358,7 @@ namespace Samraksh.VirtualFence.Components
                  }
                 
             }
-
-            public static class TooString
-            {
-                public static char[] PayLoad(byte[] payloadBytes, int payloadLength)
-                {
-                    char[] output = new char[payloadLength];
-                    int payloadOffset;
-                    for (payloadOffset = 0; payloadOffset < payloadLength; payloadOffset = payloadOffset + 1)
-                    {
-
-                        output[payloadOffset] = BitConverter.ToChar(payloadBytes, payloadOffset);
-                    }
-
-                    return output;
-                }
-            }
+             */
             public static class AddPayload
 			{
                  public static int SendPacket(byte[] msgBytes, int msgOffset, byte[] payloadBytes, int payLoadLength){
